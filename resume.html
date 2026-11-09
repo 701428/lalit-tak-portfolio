@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+<body>
+<title>Lalit Tak - Resume</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&family=Inter:wght@400;500;600&display=swap');
+:root{
+  --gold:#C8961A;--cream:#F9F5EC;--ink:#111;--body:#3A3A3A;--muted:#777;--border:#E2DDD4;
+  --ff-head:'Poppins',sans-serif;--ff-body:'Inter',sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:var(--ff-body);background:#f5f2ed;color:var(--body);
+  padding:24px max(16px,env(safe-area-inset-left,0px));
+  padding-right:max(16px,env(safe-area-inset-right,0px));
+  min-height:100vh;
+}
+/* Print bar */
+.print-bar{
+  max-width:860px;margin:0 auto 20px;
+  background:#fff;border:1.5px solid var(--border);border-radius:10px;
+  padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;
+  font-size:.85rem;color:var(--muted);
+}
+.print-bar strong{color:var(--ink)}
+.btn-print{
+  background:var(--gold);color:#fff;border:none;border-radius:7px;
+  padding:9px 20px;font-family:var(--ff-head);font-weight:600;font-size:.8rem;
+  letter-spacing:.04em;cursor:pointer;white-space:nowrap;
+  transition:opacity .2s;
+}
+.btn-print:hover{opacity:.85}
+
+/* CV Card */
+.cv{
+  max-width:860px;margin:0 auto;
+  background:#fff;border-radius:16px;
+  box-shadow:0 4px 32px rgba(0,0,0,.08);
+  overflow:hidden;
+}
+.cv-head{
+  background:var(--ink);color:#fff;
+  padding:40px 48px 36px;position:relative;
+  overflow:hidden;
+}
+.cv-head::before{
+  content:'';position:absolute;right:-40px;top:-40px;
+  width:220px;height:220px;border-radius:50%;
+  background:var(--gold);opacity:.08;
+}
+.cv-name{
+  font-family:var(--ff-head);font-weight:900;font-size:2.4rem;
+  letter-spacing:-.02em;color:#fff;line-height:1.1;
+}
+.cv-name span{color:var(--gold)}
+.cv-title{
+  font-family:var(--ff-head);font-weight:600;font-size:.9rem;
+  color:#ccc;margin-top:6px;line-height:1.5;
+}
+.cv-contacts{
+  display:flex;flex-wrap:wrap;gap:6px 20px;margin-top:16px;
+}
+.cv-contact{
+  font-size:.78rem;color:#aaa;display:flex;align-items:center;gap:5px;
+}
+.cv-contact a{color:#ccc;text-decoration:none}
+.cv-contact a:hover{color:var(--gold)}
+.dot-sep{color:#555}
+
+/* Body */
+.cv-body{padding:36px 48px 48px}
+.section{margin-bottom:28px}
+.section-head{
+  font-family:var(--ff-head);font-weight:700;font-size:.7rem;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--gold);
+  border-bottom:1.5px solid var(--gold);padding-bottom:5px;margin-bottom:14px;
+}
+.summary{
+  font-size:.88rem;line-height:1.75;color:var(--body);
+}
+/* Skills grid */
+.skills-grid{display:grid;gap:7px}
+.skill-row{font-size:.83rem;line-height:1.6}
+.skill-row strong{color:var(--ink);font-weight:600;margin-right:4px}
+/* Experience */
+.exp{margin-bottom:20px}
+.exp-head{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:4px}
+.exp-org{font-family:var(--ff-head);font-weight:700;font-size:.95rem;color:var(--ink)}
+.exp-date{font-size:.78rem;color:var(--muted);white-space:nowrap}
+.exp-role{font-size:.82rem;font-style:italic;color:var(--muted);margin-top:2px;margin-bottom:8px}
+.exp ul{padding-left:16px;display:flex;flex-direction:column;gap:5px}
+.exp li{font-size:.83rem;line-height:1.65;color:var(--body)}
+.exp li strong{color:var(--ink);font-weight:600}
+/* Projects */
+.proj-list{display:flex;flex-direction:column;gap:9px}
+.proj{font-size:.83rem;line-height:1.6}
+.proj strong{color:var(--ink);font-weight:600}
+.proj a{color:var(--gold);text-decoration:none}
+/* Education */
+.edu-list{display:flex;flex-direction:column;gap:10px}
+.edu{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:3px}
+.edu-deg{font-weight:600;font-size:.85rem;color:var(--ink)}
+.edu-yr{font-size:.78rem;color:var(--muted)}
+.edu-inst{font-size:.78rem;color:var(--muted)}
+/* Certs */
+.cert-list{display:flex;flex-direction:column;gap:7px}
+.cert{font-size:.83rem;line-height:1.6}
+.cert strong{color:var(--ink);font-weight:600}
+/* Tags row */
+.tag-row{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+.tag{
+  background:var(--cream);border:1px solid var(--border);
+  border-radius:999px;padding:3px 10px;
+  font-size:.72rem;font-weight:500;color:var(--body);
+}
+.tag.gold{background:rgba(200,150,26,.1);border-color:var(--gold);color:var(--gold)}
+
+@media print{
+  body{background:#fff;padding:0}
+  .print-bar{display:none}
+  .cv{border-radius:0;box-shadow:none;max-width:100%}
+  .cv-body{padding:28px 36px 36px}
+  .cv-head{padding:30px 36px 26px}
+  .section{page-break-inside:avoid}
+  .exp{page-break-inside:avoid}
+}
+@media(max-width:600px){
+  .cv-name{font-size:1.8rem}
+  .cv-head,.cv-body{padding-left:20px;padding-right:20px}
+  .exp-head{flex-direction:column}
+}
+</style>
+
+<div class="print-bar">
+  <span><strong>Lalit Tak</strong> — Product Manager CV &nbsp;·&nbsp; Use your browser's print dialog to save as PDF</span>
+  <button class="btn-print" id="dlBtn" onclick="downloadCV()">⬇ Download CV (PDF)</button>
+  <script>
+  async function downloadCV(){
+    var btn=document.getElementById('dlBtn');
+    btn.textContent='Preparing…';btn.disabled=true;
+    try{
+      var downloads=await claude.use('downloads');
+      if(!downloads){btn.textContent='⬇ Download CV (PDF)';btn.disabled=false;return;}
+      var res=await fetch('/_blob/3afc371d69d8866ad32e7622c036cca0');
+      var blob=await res.blob();
+      await downloads.save({filename:'Lalit_Tak_PM_CV.pdf',data:blob});
+      btn.textContent='✓ Downloaded!';
+      setTimeout(function(){btn.textContent='⬇ Download CV (PDF)';btn.disabled=false;},2000);
+    }catch(e){
+      btn.textContent='⬇ Download CV (PDF)';btn.disabled=false;
+    }
+  }
+  </script>
+</div>
+
+<div class="print-bar">
+  <span><strong>Lalit Tak</strong> &mdash; Product Manager Resume</span>
+  <a class="btn-print" href="Lalit_Tak_Resume.pdf" download="Lalit_Tak_Resume.pdf">&#8595; Download Resume (PDF)</a>
+</div>
+
+<div class="cv">
+  <!-- Header -->
+  <div class="cv-head">
+    <div class="cv-name">Lalit <span>Tak</span></div>
+    <div class="cv-title">Product Manager &nbsp;|&nbsp; Technical PM &nbsp;|&nbsp; B2B Platforms, IoT &amp; Smart Metering (HES, MDMS, Prepaid)</div>
+    <div class="cv-contacts">
+      <span class="cv-contact">📍 Jaipur, India</span>
+      <span class="cv-contact">📞 <a href="tel:+917014281550">+91 70142 81550</a></span>
+      <span class="cv-contact">✉️ <a href="mailto:taklalit00@gmail.com">taklalit00@gmail.com</a></span>
+      <span class="cv-contact">🔗 <a href="https://linkedin.com/in/lalit-tak" target="_blank">linkedin.com/in/lalit-tak</a></span>
+      <span class="cv-contact">🌐 <a href="https://lalit-tak-resume.netlify.app" target="_blank">lalit-tak-resume.netlify.app</a></span>
+    </div>
+  </div>
+
+  <div class="cv-body">
+
+    <!-- Summary -->
+    <div class="section">
+      <div class="section-head">Professional Summary</div>
+      <p class="summary">
+        AI-augmented Technical Product Manager with ~5 years in energy-tech and enterprise software. Currently SDE-3 Team Lead at Polaris Smart Metering, owning the full product lifecycle across HES, MDMS, Prepaid and production-automation platforms. I turn field, manufacturing and operations problems into PRDs, roadmaps and shipped software — combining deep engineering fluency (Python, SQL, REST APIs) with GenAI co-strategist workflows and prompt engineering to accelerate discovery and decision-making. Conceived and shipped Merak, FIT and SNM — 0-to-1 AI-native internal products adopted across engineering and production teams. Led 14+ engineers, raising on-time delivery from ~60% to 90%+. Pursuing the International Certificate in Product Management (ICPM), including a Generative AI Co-Strategist module, from the Institute of Product Leadership, USA.
+      </p>
+    </div>
+
+    <!-- Core PM Skills -->
+    <div class="section">
+      <div class="section-head">Core Product Management Skills</div>
+      <div class="skills-grid">
+        <div class="skill-row"><strong>Product:</strong> AI-First Product Strategy · Product Roadmap · Lifecycle Management · Product Discovery · PRD / BRD · User Stories · Backlog Prioritisation (RICE, MoSCoW, Kano) · MVP Definition · North Star Metrics · OKR/KPI · PLG · GTM Strategy · A/B Testing · Customer Discovery · User Personas · Journey Mapping</div>
+        <div class="skill-row"><strong>Delivery:</strong> Agile/Scrum · Sprint Planning · Backlog Grooming · Release Management · Dependency Management · RCA &amp; CAPA · SLA-driven Issue Triage · Quality Gates · Cross-functional Leadership</div>
+        <div class="skill-row"><strong>AI &amp; Data:</strong> GenAI Co-Strategist · Prompt Engineering · LLM-Powered Workflows · Intelligent Automation · Data-Driven Decision Making · ML-Driven Insights · Operational Analytics</div>
+        <div class="skill-row"><strong>Domain:</strong> Smart Metering · AMI · IoT Devices · Head-End Systems (HES) · MDMS · Prepaid Metering · Manufacturing / NPI · B2B Enterprise Platforms · Energy Tech</div>
+      </div>
+    </div>
+
+    <!-- Experience -->
+    <div class="section">
+      <div class="section-head">Professional Experience</div>
+
+      <div class="exp">
+        <div class="exp-head">
+          <span class="exp-org">Polaris Smart Metering Pvt. Ltd., Jaipur</span>
+          <span class="exp-date">Dec 2024 – Present</span>
+        </div>
+        <div class="exp-role">SDE-3 Team Lead &nbsp;(Product &amp; engineering lead for HES, MDMS, Prepaid and production automation)</div>
+        <ul>
+          <li><strong>Product ownership:</strong> End-to-end lifecycle across HES, MDMS, Prepaid and production-automation workstreams — PRDs, user stories, roadmap, milestones, releases and stakeholder sign-off for a 1,000+ device smart meter deployment.</li>
+          <li><strong>0-to-1 AI-native product:</strong> Conceived and shipped <strong>Merak</strong> (Polagram Intelligence Platform) — a live operational-intelligence web product surfacing real-time data and streamlining cross-team workflows for engineering and product teams.</li>
+          <li><strong>Problem to product:</strong> Built the <strong>Field Issue Tracker (FIT)</strong> — Jira-integrated, 7-stage lifecycle (Draft → Closed), RBAC, automated status sync and email alerts; adopted by 20+ team members tracking 100+ field issues.</li>
+          <li><strong>Manufacturing platform:</strong> Defined and delivered <strong>Serial Number Management (SNM)</strong> — production-grade serial generation, tracking and lifecycle management; RBAC, batch generation, audit trails, multi-format export (CSV/JSON/Excel).</li>
+          <li><strong>Release management:</strong> Own the R&amp;D-to-NPI release gate, coordinating firmware, HES, BCS and hardware sign-offs across 6+ stakeholders; prevented 3+ major delivery slippages per quarter.</li>
+          <li><strong>Process product:</strong> Designed SLA-driven production triage (Critical: 2h, High: 4h) with structured RCA and CAPA; adopted across Production, QA and R&amp;D.</li>
+          <li><strong>Intelligent automation:</strong> Institutionalised a 5-phase automation dev &amp; validation workflow with quality gates and Git-based control — 60%+ deployment cycle cut, zero unreviewed scripts in production.</li>
+          <li><strong>Team leadership:</strong> Led 14 engineers via Agile/Scrum and JIRA; on-time delivery 60% → 90%+; requirement-to-implementation cycle time cut by 40%.</li>
+        </ul>
+      </div>
+
+      <div class="exp">
+        <div class="exp-head">
+          <span class="exp-org">Secure Meters Ltd., Udaipur</span>
+          <span class="exp-date">Sep 2021 – Oct 2024</span>
+        </div>
+        <div class="exp-role">Software Engineer &nbsp;(Smart metering projects: Banswara, Bhilwara and Bihar deployments)</div>
+        <ul>
+          <li>Delivered features and updates for utility smart metering projects across HES, MDMS and Prepaid systems at 10,000+ device scale with 99%+ data accuracy.</li>
+          <li>Gathered and clarified requirements with cross-functional teams; translated into solution designs and dev plans.</li>
+          <li>Managed PostgreSQL databases and ETL pipelines (Pentaho/Kettle); optimised DB performance, resolved data issues.</li>
+          <li>Wrote test plans; ran regression, integration and UAT; automated manual test cases with AutoIT.</li>
+          <li>Eliminated 15+ engineering hours/week through data-driven automation of manual validation workflows.</li>
+          <li>Reduced post-release production incidents by 30% through improved system integration and regression testing.</li>
+        </ul>
+      </div>
+
+      <div class="exp">
+        <div class="exp-head">
+          <span class="exp-org">Industrial Traineeships</span>
+          <span class="exp-date">2014 – 2018</span>
+        </div>
+        <div class="exp-role">BHEL · JDVVNL (Jodhpur) · HNG Float Glass Ltd. · RVPN (Rajasthan Vidyut Prasaran Nigam)</div>
+        <ul>
+          <li>Foundation in electrical systems, industrial automation and large-scale operations management.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Products -->
+    <div class="section">
+      <div class="section-head">Selected Products &amp; Projects</div>
+      <div class="proj-list">
+        <div class="proj"><strong>Merak, Polagram Intelligence Platform</strong> — Live operational-intelligence platform; real-time data and cross-team workflow surface for engineering and product teams. <a href="https://merak.polagram.in" target="_blank">merak.polagram.in</a></div>
+        <div class="proj"><strong>Field Issue Tracker (FIT)</strong> — React/FastAPI; Jira-integrated; 7-stage lifecycle; RBAC; 20+ users; 100+ field issues tracked.</div>
+        <div class="proj"><strong>Serial Number Management (SNM)</strong> — Meter manufacturing serial generation, tracking and lifecycle; RBAC; audit trails; CSV/JSON/Excel export. <a href="https://snm.polagram.in/Serialnumbergenerator/" target="_blank">snm.polagram.in</a></div>
+        <div class="proj"><strong>R&amp;D-to-NPI Release Gate</strong> — Multi-stakeholder checklist ensuring all firmware, HES, BCS and hardware deliverables close before manufacturing.</div>
+        <div class="proj"><strong>5-Phase Automation Dev &amp; Validation Workflow</strong> — Quality gates, technical review, SOP compliance, Git version control; 60%+ deployment cycle cut.</div>
+      </div>
+    </div>
+
+    <!-- Education -->
+    <div class="section">
+      <div class="section-head">Education</div>
+      <div class="edu-list">
+        <div>
+          <div class="edu">
+            <span class="edu-deg">M.Tech, Power System Engineering — NIT Surat (SVNIT)</span>
+            <span class="edu-yr">2019 – 2021</span>
+          </div>
+          <div class="edu-inst">CGPA 8.50 / 10</div>
+        </div>
+        <div>
+          <div class="edu">
+            <span class="edu-deg">B.Tech, Electrical Engineering — MBM Engineering College (MBM University), Jodhpur</span>
+            <span class="edu-yr">2016 – 2019</span>
+          </div>
+          <div class="edu-inst">CGPA 7.84 / 10</div>
+        </div>
+        <div>
+          <div class="edu">
+            <span class="edu-deg">Diploma, Electrical Engineering — Board of Technical Education, Rajasthan</span>
+            <span class="edu-yr">2013 – 2015</span>
+          </div>
+          <div class="edu-inst">76.55%</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Certifications -->
+    <div class="section">
+      <div class="section-head">Certifications &amp; Publications</div>
+      <div class="cert-list">
+        <div class="cert"><strong>International Certificate in Product Management (ICPM)</strong> — Institute of Product Leadership, USA (In progress, expected Nov 2026). Modules: PM Fundamentals · Product Design (Figma, Balsamiq, Miro) · Agile PM · Go-to-Market Strategy · Data-Driven Products (Mixpanel, GA) · <em>Generative AI Co-Strategist</em></div>
+        <div class="cert"><strong>Fundamentals of Project Planning and Management</strong> — University of Virginia (Coursera), 2020</div>
+        <div class="cert"><strong>Effective Problem-Solving and Decision-Making</strong> — UC Irvine (Coursera), 2020</div>
+        <div class="cert"><strong>Machine Learning for All</strong> — University of London (Coursera), 2020</div>
+        <div class="cert"><strong>7 peer-reviewed papers and book chapters</strong> (IEEE, Springer) on smart grids &amp; AMI, cybersecurity in energy systems, and reliability engineering. Full list: <a href="https://linkedin.com/in/lalit-tak" style="color:var(--gold)" target="_blank">linkedin.com/in/lalit-tak</a></div>
+      </div>
+    </div>
+
+    <!-- Tools -->
+    <div class="section">
+      <div class="section-head">Tools &amp; Technical Skills</div>
+      <div class="skills-grid">
+        <div class="skill-row"><strong>Product &amp; Delivery:</strong> JIRA · Figma · Balsamiq · Miro · MS Visio · Excel · Mixpanel · Google Analytics</div>
+        <div class="skill-row"><strong>Engineering &amp; Data:</strong> Python · SQL · PostgreSQL · REST APIs · ETL (Pentaho/Kettle) · JavaScript · Git/GitHub · CI/CD · Linux · Bash · AutoIT</div>
+        <div class="skill-row"><strong>AI &amp; GenAI:</strong> OpenAI (GPT-4) · Claude (Anthropic) · Gemini · Prompt Engineering · LLM-Powered Workflows · Intelligent Automation</div>
+      </div>
+      <div class="tag-row" style="margin-top:14px">
+        <span class="tag gold">AI-First PM</span>
+        <span class="tag gold">GenAI Co-Strategist</span>
+        <span class="tag gold">Prompt Engineering</span>
+        <span class="tag gold">0-to-1 Product</span>
+        <span class="tag">Data-Driven</span>
+        <span class="tag">Agile / Scrum</span>
+        <span class="tag">Cross-functional</span>
+        <span class="tag">Energy Tech</span>
+        <span class="tag">IoT / Smart Metering</span>
+        <span class="tag">B2B Platforms</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>

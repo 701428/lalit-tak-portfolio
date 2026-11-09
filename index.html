@@ -313,8 +313,8 @@ footer{text-align:center;padding:24px;font-size:.78rem;color:var(--muted);backgr
       <p class="hero-sub">I bridge AI-first product thinking and engineering execution to build enterprise platforms, smart metering solutions and operational intelligence systems - from 0 to 1, powered by data and GenAI.</p>
       <div class="hero-actions">
         <a href="#case-study" class="btn btn-primary">Explore My Work</a>
-        <a href="https://claude.ai/artifact/61S5o6XLHCnB2NGbMP1dEG" target="_blank" class="btn btn-outline">View Resume</a>
-        <button class="btn btn-outline" id="dlCvBtn" onclick="dlCV()">&#8595; Download CV</button>
+        <a href="resume.html" target="_blank" class="btn btn-outline">View Resume</a>
+        <a href="Lalit_Tak_Resume.pdf" download="Lalit_Tak_Resume.pdf" class="btn btn-outline">&#8595; Download Resume</a>
         <a href="#contact" class="btn btn-text">Let's Connect →</a>
       </div>
       <div class="hero-stats">
@@ -946,20 +946,4 @@ var cio = new IntersectionObserver(function(entries){
 var impactSection = document.getElementById('impact');
 if(impactSection) cio.observe(impactSection);
 
-async function dlCV(){
-  var btn=document.getElementById('dlCvBtn');
-  btn.textContent='Preparing…';btn.disabled=true;
-  try{
-    var downloads=await claude.use('downloads');
-    if(!downloads){window.open('https://claude.ai/artifact/61S5o6XLHCnB2NGbMP1dEG','_blank');btn.textContent='↓ Download CV';btn.disabled=false;return;}
-    var res=await fetch('/_blob/67ebc0c6b41cd06c19b709d4593d097b');
-    var blob=await res.blob();
-    await downloads.save({filename:'Lalit_Tak_PM_CV.pdf',data:blob});
-    btn.textContent='✓ Downloaded!';
-    setTimeout(function(){btn.textContent='↓ Download CV';btn.disabled=false;},2000);
-  }catch(e){
-    window.open('https://claude.ai/artifact/61S5o6XLHCnB2NGbMP1dEG','_blank');
-    btn.textContent='↓ Download CV';btn.disabled=false;
-  }
-}
 </script>
