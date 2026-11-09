@@ -263,6 +263,18 @@ nav{position:sticky;top:0;z-index:1000;background:rgba(249,245,236,.88);backdrop
 /* Footer */
 footer{text-align:center;padding:24px;font-size:.78rem;color:var(--muted);background:var(--page-bg);border-top:1px solid rgba(0,0,0,.06)}
 
+/* ── HAMBURGER MENU ── */
+.nav-hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;padding:6px;cursor:pointer;z-index:1100}
+.nav-hamburger span{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;transition:transform .3s,opacity .3s}
+.nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-hamburger.open span:nth-child(2){opacity:0}
+.nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.nav-mobile{display:none;position:fixed;inset:0;top:60px;background:rgba(249,245,236,.97);backdrop-filter:blur(16px);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:0}
+.nav-mobile.open{display:flex}
+.nav-mobile a{font-family:var(--ff-head);font-weight:700;font-size:1.3rem;padding:18px 0;color:var(--ink);letter-spacing:.02em;border-bottom:1px solid rgba(200,150,26,.12);width:100%;text-align:center}
+.nav-mobile a:hover{color:var(--gold)}
+.nav-mobile .nav-mobile-cta{margin-top:24px;background:var(--gold);color:#fff;padding:14px 40px;border-radius:999px;font-size:1rem;border:none;width:auto}
+
 /* Responsive */
 @media(max-width:900px){
   .hero-inner,.about-grid{grid-template-columns:1fr;gap:40px}
@@ -272,15 +284,38 @@ footer{text-align:center;padding:24px;font-size:.78rem;color:var(--muted);backgr
   .journey-steps{grid-template-columns:1fr;border-radius:var(--r);overflow:hidden}
   .jstep{border-right:none;border-bottom:1px solid var(--page-bg)}
   .tab-panel.active{grid-template-columns:1fr}
+  .section{padding:72px max(20px,env(safe-area-inset-left,0px))}
 }
 @media(max-width:600px){
+  .nav-links,.nav-cta{display:none}
+  .nav-hamburger{display:flex}
   .cap-grid,.impact-grid,.research-grid{grid-template-columns:1fr}
   .hero-stats{grid-template-columns:1fr 1fr}
   .hero-badges{display:none}
   .jcontent ul{grid-template-columns:1fr}
   .persona-wrap{grid-template-columns:1fr}
   .prob-grid{grid-template-columns:1fr}
-  .nav-links{display:none}
+  .eco-grid{grid-template-columns:1fr}
+  .section{padding:56px max(16px,env(safe-area-inset-left,0px))}
+  .section-title{font-size:1.8rem}
+  .hero-h1{font-size:2.2rem}
+  #hero{padding-top:60px;min-height:auto}
+  .hero-sub{font-size:.95rem}
+  .hero-actions{flex-direction:column;align-items:flex-start;gap:10px}
+  .hero-actions .btn{width:100%;justify-content:center}
+  .hero-stats{grid-template-columns:1fr 1fr;gap:8px}
+  .stat-tile .num{font-size:1.5rem}
+  .tab-bar{width:100%;overflow-x:auto;white-space:nowrap;padding-bottom:4px}
+  .tab-btn{padding:9px 16px;font-size:.8rem}
+  .cs-meta{flex-direction:column;gap:14px}
+  .contact-buttons{flex-direction:column;align-items:center}
+  .ct-btn{width:100%;max-width:320px;justify-content:center}
+  .contact-info{flex-direction:column;gap:10px;align-items:center}
+  .journey-tl{padding-left:32px}
+  .about-grid{grid-template-columns:1fr}
+  .persona-cols{grid-template-columns:1fr}
+  .impact-num{font-size:2rem}
+  .research-grid{grid-template-columns:1fr}
 }
 </style>
 
@@ -301,8 +336,22 @@ footer{text-align:center;padding:24px;font-size:.78rem;color:var(--muted);backgr
       <li><a href="#contact">Contact</a></li>
     </ul>
     <a href="#contact" class="nav-cta">Let's Connect</a>
+    <button class="nav-hamburger" id="navHamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
+<!-- MOBILE NAV -->
+<div class="nav-mobile" id="navMobile">
+  <a href="#about" class="nav-mobile-link">About</a>
+  <a href="#capabilities" class="nav-mobile-link">Skills</a>
+  <a href="#case-study" class="nav-mobile-link">Case Study</a>
+  <a href="#impact" class="nav-mobile-link">Impact</a>
+  <a href="#journey" class="nav-mobile-link">Journey</a>
+  <a href="#research" class="nav-mobile-link">Research</a>
+  <a href="#contact" class="nav-mobile-link">Contact</a>
+  <a href="#contact" class="nav-mobile-link nav-mobile-cta">Let's Connect</a>
+</div>
 
 <!-- ══════════ HERO ══════════ -->
 <section id="hero">
@@ -875,6 +924,22 @@ footer{text-align:center;padding:24px;font-size:.78rem;color:var(--muted);backgr
 </footer>
 
 <script>
+// Hamburger menu
+var hamburger = document.getElementById('navHamburger');
+var mobileNav = document.getElementById('navMobile');
+hamburger.addEventListener('click', function(){
+  hamburger.classList.toggle('open');
+  mobileNav.classList.toggle('open');
+  document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
+});
+document.querySelectorAll('.nav-mobile a').forEach(function(link){
+  link.addEventListener('click', function(){
+    hamburger.classList.remove('open');
+    mobileNav.classList.remove('open');
+    document.body.style.overflow = '';
+  });
+});
+
 // Scroll progress
 var pb = document.getElementById('progress-bar');
 window.addEventListener('scroll', function(){
