@@ -429,7 +429,7 @@
 
   .hero-stats {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 12px;
     animation: fadeUp .6s .5s both
   }
@@ -2283,7 +2283,7 @@
 <section id="hero">
   <div class="hero-inner">
     <div class="hero-left">
-      <div class="hero-eyebrow">Product Manager &middot; Engineering Lead &middot; Smart Metering &middot; Energy Tech
+      <div class="hero-eyebrow">Product Manager &middot; Engineering Lead &middot; IoT &middot; Energy Tech
       </div>
       <h1 class="hero-h1">Led 14 engineers.<br>Shipped 4 platforms.<br>Delivered <span class="g">results.</span></h1>
       <p class="hero-sub">Technical Product Manager with 5+ years in energy-tech - owning product lifecycle across HES,
@@ -2805,8 +2805,7 @@
         <!-- User Persona -->
         <div class="reveal" style="margin-bottom:48px">
           <h3 style="font-family:var(--ff-head);font-weight:700;font-size:1.3rem;color:var(--ink);margin-bottom:16px">C.
-            User Persona <span style="font-size:.8rem;color:var(--muted);font-weight:400;margin-left:8px">(Illustrative
-              - based on field observations)</span></h3>
+            User Persona</h3>
           <div class="persona-wrap">
             <div style="text-align:center">
               <div class="persona-avatar"><img
@@ -2864,223 +2863,224 @@
             Before &amp; After</h3>
           <p style="text-align:center;font-size:.88rem;color:var(--muted);margin-bottom:24px">What changed when Merak,
             FIT and SNM went live</p>
-          <div class="workflow-toggle">
-            <button class="wf-btn active" onclick="setWF(this,'detailed')">Detailed View</button>
-            <button class="wf-btn" onclick="setWF(this,'compact')">Compact View</button>
+          <div style="overflow-x:auto">
+            <table class="workflow-table compact" id="workflow-table">
+              <thead>
+                <tr>
+                  <th>Domain</th>
+                  <th class="asis-head">AS-IS (Before Dec 2024)</th>
+                  <th class="tobe-head">TO-BE (After)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Production tracking</td>
+                  <td class="asis-cell">WhatsApp groups + paper logbooks. No live status.</td>
+                  <td class="tobe-cell">Merak live dashboard. Real-time throughput across 6 stations.</td>
+                </tr>
+                <tr>
+                  <td>Serial traceability</td>
+                  <td class="asis-cell">Manual Excel sheets. Error-prone, no audit trail.</td>
+                  <td class="tobe-cell">SNM - RBAC, batch generation, audit trail, multi-format export.</td>
+                </tr>
+                <tr>
+                  <td>Field issues</td>
+                  <td class="asis-cell">Email chains. No lifecycle, no ownership.</td>
+                  <td class="tobe-cell">FIT - 7-stage lifecycle, Jira-synced, SLA-driven triage.</td>
+                </tr>
+                <tr>
+                  <td>Firmware status</td>
+                  <td class="asis-cell">Verbal updates in stand-ups only.</td>
+                  <td class="tobe-cell">Merak real-time calibration view, visible to all teams.</td>
+                </tr>
+                <tr>
+                  <td>Coordination</td>
+                  <td class="asis-cell">Ad-hoc meetings. No audit trail.</td>
+                  <td class="tobe-cell">Structured workflows, automated alerts, RCA/CAPA.</td>
+                </tr>
+                <tr>
+                  <td>Delivery</td>
+                  <td class="asis-cell" style="font-weight:700">~60% on-time</td>
+                  <td class="tobe-cell" style="font-weight:700">90%+ on-time</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
-          <table class="workflow-table" id="workflow-table">
-            <thead>
-              <tr>
-                <th>Domain</th>
-                <th class="asis-head">AS-IS (Before Dec 2024)</th>
-                <th class="tobe-head">TO-BE (After)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Production tracking</td>
-                <td class="asis-cell">WhatsApp groups + paper logbooks. No live status.</td>
-                <td class="tobe-cell">Merak live dashboard. Real-time throughput across 6 stations.</td>
-              </tr>
-              <tr>
-                <td>Serial traceability</td>
-                <td class="asis-cell">Manual Excel sheets. Error-prone, no audit trail.</td>
-                <td class="tobe-cell">SNM - RBAC, batch generation, audit trail, multi-format export.</td>
-              </tr>
-              <tr>
-                <td>Field issues</td>
-                <td class="asis-cell">Email chains. No lifecycle, no ownership.</td>
-                <td class="tobe-cell">FIT - 7-stage lifecycle, Jira-synced, SLA-driven triage.</td>
-              </tr>
-              <tr>
-                <td>Firmware status</td>
-                <td class="asis-cell">Verbal updates in stand-ups only.</td>
-                <td class="tobe-cell">Merak real-time calibration view, visible to all teams.</td>
-              </tr>
-              <tr>
-                <td>Coordination</td>
-                <td class="asis-cell">Ad-hoc meetings. No audit trail.</td>
-                <td class="tobe-cell">Structured workflows, automated alerts, RCA/CAPA.</td>
-              </tr>
-              <tr>
-                <td>Delivery</td>
-                <td class="asis-cell" style="font-weight:700">~60% on-time</td>
-                <td class="tobe-cell" style="font-weight:700">90%+ on-time</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <!-- Product Journey -->
-        <div class="reveal" style="margin-bottom:48px">
-          <h3 style="font-family:var(--ff-head);font-weight:700;font-size:1.3rem;color:var(--ink);margin-bottom:16px">D.
-            Product Journey</h3>
-          <div class="journey-steps" id="jsteps">
-            <div class="jstep active" data-panel="discover" onclick="setJStep(this,'discover')">
-              <div class="jstep-num">01</div>
-              <div class="jstep-label">DISCOVER</div>
+          <!-- Product Journey -->
+          <div class="reveal" style="margin-bottom:48px">
+            <h3 style="font-family:var(--ff-head);font-weight:700;font-size:1.3rem;color:var(--ink);margin-bottom:16px">
+              D.
+              Product Journey</h3>
+            <div class="journey-steps" id="jsteps">
+              <div class="jstep active" data-panel="discover" onclick="setJStep(this,'discover')">
+                <div class="jstep-num">01</div>
+                <div class="jstep-label">DISCOVER</div>
+              </div>
+              <div class="jstep" data-panel="define" onclick="setJStep(this,'define')">
+                <div class="jstep-num">02</div>
+                <div class="jstep-label">DEFINE</div>
+              </div>
+              <div class="jstep" data-panel="build" onclick="setJStep(this,'build')">
+                <div class="jstep-num">03</div>
+                <div class="jstep-label">BUILD</div>
+              </div>
+              <div class="jstep" data-panel="launch" onclick="setJStep(this,'launch')">
+                <div class="jstep-num">04</div>
+                <div class="jstep-label">LAUNCH</div>
+              </div>
+              <div class="jstep" data-panel="iterate" onclick="setJStep(this,'iterate')">
+                <div class="jstep-num">05</div>
+                <div class="jstep-label">ITERATE</div>
+              </div>
             </div>
-            <div class="jstep" data-panel="define" onclick="setJStep(this,'define')">
-              <div class="jstep-num">02</div>
-              <div class="jstep-label">DEFINE</div>
+            <div id="panel-discover" class="jcontent active">
+              <h4>Discover</h4>
+              <ul>
+                <li>Production-floor observation</li>
+                <li>Existing workflow analysis</li>
+                <li>Stakeholder interviews</li>
+                <li>Pain-point mapping</li>
+                <li>Field issue pattern analysis</li>
+                <li>Serial tracking gap assessment</li>
+              </ul>
             </div>
-            <div class="jstep" data-panel="build" onclick="setJStep(this,'build')">
-              <div class="jstep-num">03</div>
-              <div class="jstep-label">BUILD</div>
+            <div id="panel-define" class="jcontent">
+              <h4>Define</h4>
+              <ul>
+                <li>PRD development for each product</li>
+                <li>Requirements prioritisation (MoSCoW)</li>
+                <li>User story writing &amp; grooming</li>
+                <li>Stakeholder alignment sessions</li>
+                <li>MVP scope definition</li>
+                <li>Engineering dependency mapping</li>
+              </ul>
             </div>
-            <div class="jstep" data-panel="launch" onclick="setJStep(this,'launch')">
-              <div class="jstep-num">04</div>
-              <div class="jstep-label">LAUNCH</div>
+            <div id="panel-build" class="jcontent">
+              <h4>Build</h4>
+              <ul>
+                <li>Agile sprint planning (2-week cycles)</li>
+                <li>Engineering coordination across teams</li>
+                <li>5-phase automation quality gates</li>
+                <li>JIRA-based progress tracking</li>
+                <li>Validation at each milestone</li>
+                <li>Git-based version control enforcement</li>
+              </ul>
             </div>
-            <div class="jstep" data-panel="iterate" onclick="setJStep(this,'iterate')">
-              <div class="jstep-num">05</div>
-              <div class="jstep-label">ITERATE</div>
+            <div id="panel-launch" class="jcontent">
+              <h4>Launch</h4>
+              <ul>
+                <li>Phased rollout to production teams</li>
+                <li>User onboarding &amp; training</li>
+                <li>SOP documentation</li>
+                <li>RBAC configuration per role</li>
+                <li>Production deployment monitoring</li>
+                <li>Stakeholder sign-off across 6+ teams</li>
+              </ul>
+            </div>
+            <div id="panel-iterate" class="jcontent">
+              <h4>Iterate</h4>
+              <ul>
+                <li>User feedback collection</li>
+                <li>KPI monitoring dashboards</li>
+                <li>Defect analysis &amp; RCA</li>
+                <li>Backlog refinement cycles</li>
+                <li>Performance tuning (&lt;1.4s latency)</li>
+                <li>Roadmap updates based on data</li>
+              </ul>
             </div>
           </div>
-          <div id="panel-discover" class="jcontent active">
-            <h4>Discover</h4>
-            <ul>
-              <li>Production-floor observation</li>
-              <li>Existing workflow analysis</li>
-              <li>Stakeholder interviews</li>
-              <li>Pain-point mapping</li>
-              <li>Field issue pattern analysis</li>
-              <li>Serial tracking gap assessment</li>
-            </ul>
-          </div>
-          <div id="panel-define" class="jcontent">
-            <h4>Define</h4>
-            <ul>
-              <li>PRD development for each product</li>
-              <li>Requirements prioritisation (MoSCoW)</li>
-              <li>User story writing &amp; grooming</li>
-              <li>Stakeholder alignment sessions</li>
-              <li>MVP scope definition</li>
-              <li>Engineering dependency mapping</li>
-            </ul>
-          </div>
-          <div id="panel-build" class="jcontent">
-            <h4>Build</h4>
-            <ul>
-              <li>Agile sprint planning (2-week cycles)</li>
-              <li>Engineering coordination across teams</li>
-              <li>5-phase automation quality gates</li>
-              <li>JIRA-based progress tracking</li>
-              <li>Validation at each milestone</li>
-              <li>Git-based version control enforcement</li>
-            </ul>
-          </div>
-          <div id="panel-launch" class="jcontent">
-            <h4>Launch</h4>
-            <ul>
-              <li>Phased rollout to production teams</li>
-              <li>User onboarding &amp; training</li>
-              <li>SOP documentation</li>
-              <li>RBAC configuration per role</li>
-              <li>Production deployment monitoring</li>
-              <li>Stakeholder sign-off across 6+ teams</li>
-            </ul>
-          </div>
-          <div id="panel-iterate" class="jcontent">
-            <h4>Iterate</h4>
-            <ul>
-              <li>User feedback collection</li>
-              <li>KPI monitoring dashboards</li>
-              <li>Defect analysis &amp; RCA</li>
-              <li>Backlog refinement cycles</li>
-              <li>Performance tuning (&lt;1.4s latency)</li>
-              <li>Roadmap updates based on data</li>
-            </ul>
-          </div>
-        </div>
 
-        <!-- Product Ecosystem -->
-        <div class="reveal" style="margin-bottom:16px">
-          <h3 style="font-family:var(--ff-head);font-weight:700;font-size:1.3rem;color:var(--ink);margin-bottom:16px">E.
-            What Was Built</h3>
-        </div>
+          <!-- Product Ecosystem -->
+          <div class="reveal" style="margin-bottom:16px">
+            <h3 style="font-family:var(--ff-head);font-weight:700;font-size:1.3rem;color:var(--ink);margin-bottom:16px">
+              E.
+              What Was Built</h3>
+          </div>
 
-        <div class="products-section-label reveal">Shipped Software Products <span>Live in production</span></div>
-        <div class="eco-grid" style="margin-top:0;margin-bottom:40px">
-          <div class="eco-card reveal reveal-delay-1">
-            <div class="eco-tag">Intelligence Platform</div>
-            <div class="eco-title">MERAK</div>
-            <div class="eco-sub">Polagram Intelligence Platform - Live operational analytics for manufacturing</div>
-            <ul class="eco-feats">
-              <li>Real-time production counter across 6 manufacturing stations</li>
-              <li>4 single-phase meter families tracked with live KPIs</li>
-              <li>12 screens covering firmware, calibration, testing &amp; dispatch</li>
-              <li>&lt;1.4s data ingestion latency for live accuracy</li>
-              <li>Live at merak.polagram.in</li>
-            </ul>
-            <div class="eco-stat">Impact: <strong>Full production visibility</strong> across engineering &amp;
-              management</div>
+          <div class="products-section-label reveal">Shipped Software Products <span>Live in production</span></div>
+          <div class="eco-grid" style="margin-top:0;margin-bottom:40px">
+            <div class="eco-card reveal reveal-delay-1">
+              <div class="eco-tag">Intelligence Platform</div>
+              <div class="eco-title">MERAK</div>
+              <div class="eco-sub">Polagram Intelligence Platform - Live operational analytics for manufacturing</div>
+              <ul class="eco-feats">
+                <li>Real-time production counter across 6 manufacturing stations</li>
+                <li>4 single-phase meter families tracked with live KPIs</li>
+                <li>12 screens covering firmware, calibration, testing &amp; dispatch</li>
+                <li>&lt;1.4s data ingestion latency for live accuracy</li>
+                <li>Live at merak.polagram.in</li>
+              </ul>
+              <div class="eco-stat">Impact: <strong>Full production visibility</strong> across engineering &amp;
+                management</div>
+            </div>
+            <div class="eco-card reveal reveal-delay-2">
+              <div class="eco-tag">Issue Tracker</div>
+              <div class="eco-title">FIT</div>
+              <div class="eco-sub">Field Issue Tracker - 7-stage lifecycle, Jira-integrated</div>
+              <ul class="eco-feats">
+                <li>7-stage lifecycle: Draft → Open → In Progress → On Hold → Resolved → Verified → Closed</li>
+                <li>Jira-integrated with automated status sync and email alerts</li>
+                <li>RBAC across Production, QA, R&amp;D and Management roles</li>
+                <li>20+ active users, 100+ field issues tracked</li>
+              </ul>
+              <div class="eco-stat">Impact: <strong>Zero lost field issues</strong> - paper logs replaced entirely</div>
+            </div>
+            <div class="eco-card reveal reveal-delay-3" style="grid-column:1/-1">
+              <div class="eco-tag">Manufacturing</div>
+              <div class="eco-title">SNM</div>
+              <div class="eco-sub">Serial Number Management - Production traceability for 1,000+ device deployments
+              </div>
+              <ul class="eco-feats" style="display:grid;grid-template-columns:1fr 1fr;gap:6px">
+                <li>Batch generation up to 1,000 serial numbers</li>
+                <li>Duplicate &amp; range-overlap detection</li>
+                <li>Immutable records with full audit trails</li>
+                <li>CSV, JSON and Excel export formats</li>
+                <li>RBAC per production, QA and R&amp;D role</li>
+                <li>Live at snm.polagram.in</li>
+              </ul>
+              <div class="eco-stat">Impact: <strong>100% serial traceability</strong> - manual errors eliminated</div>
+            </div>
           </div>
-          <div class="eco-card reveal reveal-delay-2">
-            <div class="eco-tag">Issue Tracker</div>
-            <div class="eco-title">FIT</div>
-            <div class="eco-sub">Field Issue Tracker - 7-stage lifecycle, Jira-integrated</div>
-            <ul class="eco-feats">
-              <li>7-stage lifecycle: Draft → Open → In Progress → On Hold → Resolved → Verified → Closed</li>
-              <li>Jira-integrated with automated status sync and email alerts</li>
-              <li>RBAC across Production, QA, R&amp;D and Management roles</li>
-              <li>20+ active users, 100+ field issues tracked</li>
-            </ul>
-            <div class="eco-stat">Impact: <strong>Zero lost field issues</strong> - paper logs replaced entirely</div>
-          </div>
-          <div class="eco-card reveal reveal-delay-3" style="grid-column:1/-1">
-            <div class="eco-tag">Manufacturing</div>
-            <div class="eco-title">SNM</div>
-            <div class="eco-sub">Serial Number Management - Production traceability for 1,000+ device deployments</div>
-            <ul class="eco-feats" style="display:grid;grid-template-columns:1fr 1fr;gap:6px">
-              <li>Batch generation up to 1,000 serial numbers</li>
-              <li>Duplicate &amp; range-overlap detection</li>
-              <li>Immutable records with full audit trails</li>
-              <li>CSV, JSON and Excel export formats</li>
-              <li>RBAC per production, QA and R&amp;D role</li>
-              <li>Live at snm.polagram.in</li>
-            </ul>
-            <div class="eco-stat">Impact: <strong>100% serial traceability</strong> - manual errors eliminated</div>
-          </div>
-        </div>
 
-        <div class="products-section-label reveal">Process &amp; Governance Frameworks <span>Adopted org-wide</span>
+          <div class="products-section-label reveal">Process &amp; Governance Frameworks <span>Adopted org-wide</span>
+          </div>
+          <div class="eco-grid" style="margin-top:0;grid-template-columns:repeat(3,1fr)">
+            <div class="eco-card reveal reveal-delay-1">
+              <div class="eco-tag">Ops Process</div>
+              <div class="eco-title">PTJGM</div>
+              <div class="eco-sub">Production Tool &amp; JIG Management - SLA-driven triage</div>
+              <ul class="eco-feats">
+                <li>Critical: 2h | High: 4h | Medium: 1 day | Low: 2 days</li>
+                <li>Structured RCA &amp; CAPA workflows</li>
+                <li>Adopted across Production, QA &amp; R&amp;D</li>
+              </ul>
+              <div class="eco-stat">Impact: <strong>Structured escalation</strong> - no ambiguity in tool downtime</div>
+            </div>
+            <div class="eco-card reveal reveal-delay-2">
+              <div class="eco-tag">Release Governance</div>
+              <div class="eco-title">R&amp;D-to-NPI Gate</div>
+              <div class="eco-sub">Multi-stakeholder release checklist - firmware, HES, BCS &amp; hardware</div>
+              <ul class="eco-feats">
+                <li>All deliverables verified before manufacturing handoff</li>
+                <li>Coordinated sign-offs across 6+ stakeholders</li>
+                <li>Prevented 3+ major delivery slippages per quarter</li>
+              </ul>
+              <div class="eco-stat">Impact: <strong>Program predictability</strong> - delivery dates became reliable
+              </div>
+            </div>
+            <div class="eco-card reveal reveal-delay-3">
+              <div class="eco-tag">Automation Governance</div>
+              <div class="eco-title">5-Phase Workflow</div>
+              <div class="eco-sub">Automation dev &amp; validation - quality gates, Git control</div>
+              <ul class="eco-feats">
+                <li>5 phases: concept → review → develop → validate → release</li>
+                <li>Quality gates and SOP compliance at each phase</li>
+                <li>60%+ deployment cycle reduction</li>
+              </ul>
+              <div class="eco-stat">Impact: <strong>Zero unreviewed scripts</strong> in production</div>
+            </div>
+          </div>
         </div>
-        <div class="eco-grid" style="margin-top:0;grid-template-columns:repeat(3,1fr)">
-          <div class="eco-card reveal reveal-delay-1">
-            <div class="eco-tag">Ops Process</div>
-            <div class="eco-title">PTJGM</div>
-            <div class="eco-sub">Production Tool &amp; JIG Management - SLA-driven triage</div>
-            <ul class="eco-feats">
-              <li>Critical: 2h | High: 4h | Medium: 1 day | Low: 2 days</li>
-              <li>Structured RCA &amp; CAPA workflows</li>
-              <li>Adopted across Production, QA &amp; R&amp;D</li>
-            </ul>
-            <div class="eco-stat">Impact: <strong>Structured escalation</strong> - no ambiguity in tool downtime</div>
-          </div>
-          <div class="eco-card reveal reveal-delay-2">
-            <div class="eco-tag">Release Governance</div>
-            <div class="eco-title">R&amp;D-to-NPI Gate</div>
-            <div class="eco-sub">Multi-stakeholder release checklist - firmware, HES, BCS &amp; hardware</div>
-            <ul class="eco-feats">
-              <li>All deliverables verified before manufacturing handoff</li>
-              <li>Coordinated sign-offs across 6+ stakeholders</li>
-              <li>Prevented 3+ major delivery slippages per quarter</li>
-            </ul>
-            <div class="eco-stat">Impact: <strong>Program predictability</strong> - delivery dates became reliable</div>
-          </div>
-          <div class="eco-card reveal reveal-delay-3">
-            <div class="eco-tag">Automation Governance</div>
-            <div class="eco-title">5-Phase Workflow</div>
-            <div class="eco-sub">Automation dev &amp; validation - quality gates, Git control</div>
-            <ul class="eco-feats">
-              <li>5 phases: concept → review → develop → validate → release</li>
-              <li>Quality gates and SOP compliance at each phase</li>
-              <li>60%+ deployment cycle reduction</li>
-            </ul>
-            <div class="eco-stat">Impact: <strong>Zero unreviewed scripts</strong> in production</div>
-          </div>
-        </div>
-      </div>
     </section>
 
     <!-- ══════════ UI SHOWCASE ══════════ -->
@@ -3406,7 +3406,10 @@
         <h2 class="section-title reveal">Research &amp; <span class="g">Education</span></h2>
         <div class="research-grid">
           <div class="res-card reveal reveal-delay-1">
-            <h3>Research Publications</h3>
+            <h3>Research Publications <a href="https://www.linkedin.com/in/lalit-tak/details/publications/"
+                target="_blank" rel="noopener noreferrer"
+                style="font-size:.8rem;font-weight:600;color:var(--gold);margin-left:8px;text-decoration:none">↗ View on
+                LinkedIn</a></h3>
             <div class="res-item">
               <h4>IEEE &amp; Springer Publications</h4>
               <p>7 peer-reviewed papers and book chapters across smart grids, AMI, cybersecurity in energy systems and
@@ -3520,7 +3523,6 @@
 
     <footer>
       <p>Lalit Tak · Product Manager &amp; Engineering Lead · Polaris Smart Metering · Jaipur, India</p>
-      <p style="margin-top:4px">Built with HTML, CSS &amp; a passion for products that work.</p>
     </footer>
 
     <script>
