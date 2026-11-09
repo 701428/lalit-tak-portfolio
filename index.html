@@ -1,4 +1,13 @@
-<title>Lalit Tak - PM Portfolio</title>
+<title>Lalit Tak — PM Portfolio | Product Manager & Engineering Lead</title>
+<meta name="description" content="Lalit Tak — Product Manager &amp; Engineering Lead specialising in AI-first enterprise platforms, smart metering (HES, MDMS, Prepaid) and B2B IoT products. Based in Jaipur, India.">
+<meta property="og:title" content="Lalit Tak — PM Portfolio">
+<meta property="og:description" content="Product Manager with 5 years in energy-tech. Led 14 engineers. Shipped Merak, FIT, SNM. On-time delivery 60%→90%+.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://lalit-tak-resume.netlify.app">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Lalit Tak — PM Portfolio">
+<meta name="twitter:description" content="Product Manager &amp; Engineering Lead. Smart Metering, AI-first platforms, B2B enterprise.">
+<link rel="canonical" href="https://lalit-tak-resume.netlify.app">
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;900&family=Inter:wght@400;500;600&display=swap">
@@ -124,6 +133,7 @@ nav{position:sticky;top:0;z-index:1000;background:rgba(249,245,236,.88);backdrop
 .cap-icon{width:44px;height:44px;background:var(--gold-pale);border-radius:var(--r-sm);display:flex;align-items:center;justify-content:center;margin-bottom:16px;color:var(--gold)}
 .cap-icon svg{width:22px;height:22px}
 .cap-title{font-family:var(--ff-head);font-weight:700;font-size:1rem;color:var(--ink);margin-bottom:12px}
+.cap-evidence{font-size:.78rem;color:var(--gold);font-weight:600;margin-bottom:10px;font-style:italic;line-height:1.4}
 .cap-tags{display:flex;flex-wrap:wrap;gap:6px}
 .cap-tag{background:var(--page-bg);color:var(--body);padding:4px 10px;border-radius:999px;font-size:.72rem;font-weight:500}
 
@@ -260,6 +270,23 @@ nav{position:sticky;top:0;z-index:1000;background:rgba(249,245,236,.88);backdrop
 .contact-info{margin-top:40px;font-size:.85rem;color:var(--muted);display:flex;gap:24px;justify-content:center;flex-wrap:wrap}
 .contact-info a{color:var(--gold);font-weight:600}
 
+/* ── TRANSFORMATION BANNER ── */
+.transform-banner{background:var(--ink);color:#fff;border-radius:var(--r);padding:48px;margin-bottom:48px;position:relative;overflow:hidden}
+.transform-banner::before{content:'';position:absolute;top:-60px;right:-60px;width:280px;height:280px;border-radius:50%;background:var(--gold);opacity:.08;pointer-events:none}
+.transform-banner::after{content:'';position:absolute;bottom:-40px;left:-40px;width:200px;height:200px;border-radius:50%;background:var(--gold);opacity:.05;pointer-events:none}
+.transform-eyebrow{font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+.transform-h{font-family:var(--ff-head);font-weight:900;font-size:clamp(1.4rem,3vw,2.2rem);color:#fff;line-height:1.15;margin-bottom:20px}
+.transform-h span{color:var(--gold-light)}
+.transform-body{font-size:.95rem;color:rgba(255,255,255,.8);line-height:1.75;max-width:720px;margin-bottom:32px}
+.transform-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.transform-col{background:rgba(255,255,255,.06);border:1px solid rgba(200,150,26,.25);border-radius:var(--r-sm);padding:20px}
+.transform-col-label{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--gold-light);margin-bottom:8px}
+.transform-col-val{font-family:var(--ff-head);font-weight:900;font-size:1.5rem;color:#fff;line-height:1.1;margin-bottom:4px}
+.transform-col-desc{font-size:.78rem;color:rgba(255,255,255,.65)}
+/* ── PRODUCTS SPLIT ── */
+.products-section-label{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--muted);margin:40px 0 16px;padding-bottom:8px;border-bottom:1px solid rgba(0,0,0,.08)}
+.products-section-label span{background:var(--gold-pale);color:var(--gold);padding:3px 10px;border-radius:999px;margin-left:8px;font-size:.68rem}
+@media(max-width:600px){.transform-cols{grid-template-columns:1fr}.transform-banner{padding:28px}}
 /* Footer */
 footer{text-align:center;padding:24px;font-size:.78rem;color:var(--muted);background:var(--page-bg);border-top:1px solid rgba(0,0,0,.06)}
 
@@ -329,6 +356,7 @@ footer{text-align:center;padding:24px;font-size:.78rem;color:var(--muted);backgr
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#capabilities">Skills</a></li>
+      <li><a href="#transformation">0→1 Story</a></li>
       <li><a href="#case-study">Case Study</a></li>
       <li><a href="#impact">Impact</a></li>
       <li><a href="#journey">Journey</a></li>
@@ -345,6 +373,7 @@ footer{text-align:center;padding:24px;font-size:.78rem;color:var(--muted);backgr
 <div class="nav-mobile" id="navMobile">
   <a href="#about" class="nav-mobile-link">About</a>
   <a href="#capabilities" class="nav-mobile-link">Skills</a>
+  <a href="#transformation" class="nav-mobile-link">0→1 Story</a>
   <a href="#case-study" class="nav-mobile-link">Case Study</a>
   <a href="#impact" class="nav-mobile-link">Impact</a>
   <a href="#journey" class="nav-mobile-link">Journey</a>
@@ -357,9 +386,9 @@ footer{text-align:center;padding:24px;font-size:.78rem;color:var(--muted);backgr
 <section id="hero">
   <div class="hero-inner">
     <div class="hero-left">
-      <div class="hero-eyebrow">Product Manager &middot; Engineering Lead &middot; Energy Tech</div>
-      <h1 class="hero-h1">I turn complex<br>problems into<br>products that <span class="g">work.</span></h1>
-      <p class="hero-sub">I bridge AI-first product thinking and engineering execution to build enterprise platforms, smart metering solutions and operational intelligence systems - from 0 to 1, powered by data and GenAI.</p>
+      <div class="hero-eyebrow">Product Manager &middot; Engineering Lead &middot; Smart Metering &middot; AI-First</div>
+      <h1 class="hero-h1">Led 14 engineers.<br>Shipped 4 platforms.<br>Delivered <span class="g">results.</span></h1>
+      <p class="hero-sub">AI-augmented Technical PM with 5+ years in energy-tech — owning product lifecycle across HES, MDMS, Prepaid and manufacturing platforms at Polaris Smart Metering. I turn field problems into shipped software, from 0 to production. On-time delivery lifted from 60% to 90%+. Cycle time cut by 40%. Deployment effort down 60%+.</p>
       <div class="hero-actions">
         <a href="#case-study" class="btn btn-primary">Explore My Work</a>
         <a href="resume.html" target="_blank" class="btn btn-outline">View Resume</a>
@@ -368,8 +397,8 @@ footer{text-align:center;padding:24px;font-size:.78rem;color:var(--muted);backgr
       <div class="hero-stats">
         <div class="stat-tile"><div class="num">14+</div><div class="lbl">Engineers Led</div></div>
         <div class="stat-tile"><div class="num">90%+</div><div class="lbl">On-Time Delivery</div></div>
-        <div class="stat-tile"><div class="num">4</div><div class="lbl">Platforms Shipped</div></div>
-        <div class="stat-tile"><div class="num">7</div><div class="lbl">IEEE/Springer Papers</div></div>
+        <div class="stat-tile"><div class="num">−40%</div><div class="lbl">Cycle Time Reduction</div></div>
+        <div class="stat-tile"><div class="num">−60%</div><div class="lbl">Deploy Effort Cut</div></div>
       </div>
     </div>
     <div class="hero-visual">
@@ -459,37 +488,72 @@ footer{text-align:center;padding:24px;font-size:.78rem;color:var(--muted);backgr
       <div class="cap-card reveal reveal-delay-1">
         <div class="cap-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h18v4H3z"/><path d="M3 10h12v4H3z"/><path d="M3 17h8v4H3z"/></svg></div>
         <div class="cap-title">Product Strategy</div>
+        <div class="cap-evidence">Defined roadmaps for Merak, FIT &amp; SNM — all shipped to production in &lt;1 year</div>
         <div class="cap-tags"><span class="cap-tag">AI-First Thinking</span><span class="cap-tag">North Star Metrics</span><span class="cap-tag">Roadmap Planning</span><span class="cap-tag">MVP Definition</span><span class="cap-tag">OKR/KPI</span><span class="cap-tag">PLG</span></div>
       </div>
       <div class="cap-card reveal reveal-delay-2">
         <div class="cap-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></div>
         <div class="cap-title">Discovery &amp; UX</div>
+        <div class="cap-evidence">Production-floor observation + stakeholder interviews → 6 pain points → 4 shipped products</div>
         <div class="cap-tags"><span class="cap-tag">AI-Augmented Research</span><span class="cap-tag">User Personas</span><span class="cap-tag">Journey Mapping</span><span class="cap-tag">Problem Discovery</span><span class="cap-tag">Design Thinking</span><span class="cap-tag">A/B Testing</span></div>
       </div>
       <div class="cap-card reveal reveal-delay-3">
         <div class="cap-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
         <div class="cap-title">Product Execution</div>
+        <div class="cap-evidence">14 engineers, 2-week Agile sprints; on-time delivery lifted from ~60% to 90%+</div>
         <div class="cap-tags"><span class="cap-tag">PRD / FRD</span><span class="cap-tag">User Stories</span><span class="cap-tag">Acceptance Criteria</span><span class="cap-tag">Agile/Scrum</span><span class="cap-tag">Release Mgmt</span><span class="cap-tag">JIRA</span></div>
       </div>
       <div class="cap-card reveal reveal-delay-1">
         <div class="cap-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
         <div class="cap-title">Data &amp; Analytics</div>
+        <div class="cap-evidence">Live KPIs across 6 manufacturing stations via Merak; &lt;1.4s ingestion latency</div>
         <div class="cap-tags"><span class="cap-tag">Data-Driven Decisions</span><span class="cap-tag">KPI Tracking</span><span class="cap-tag">Operational Analytics</span><span class="cap-tag">ML-Driven Insights</span><span class="cap-tag">ETL / SQL</span><span class="cap-tag">Mixpanel</span></div>
       </div>
       <div class="cap-card reveal reveal-delay-2">
         <div class="cap-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
         <div class="cap-title">Engineering Collaboration</div>
+        <div class="cap-evidence">Python, SQL, REST APIs used daily with the engineering team — not just in PRDs</div>
         <div class="cap-tags"><span class="cap-tag">Python</span><span class="cap-tag">JavaScript</span><span class="cap-tag">REST APIs</span><span class="cap-tag">PostgreSQL</span><span class="cap-tag">System Integration</span><span class="cap-tag">CI/CD Concepts</span></div>
       </div>
       <div class="cap-card reveal reveal-delay-3">
         <div class="cap-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
         <div class="cap-title">Leadership</div>
+        <div class="cap-evidence">Led 14 engineers; prevented 3+ quarterly delivery slippages; delivery predictability to 90%+</div>
         <div class="cap-tags"><span class="cap-tag">14+ Engineers</span><span class="cap-tag">Stakeholder Mgmt</span><span class="cap-tag">Dependency Mgmt</span><span class="cap-tag">Risk Mitigation</span><span class="cap-tag">Cross-functional</span><span class="cap-tag">SLA / CAPA</span></div>
       </div>
       <div class="cap-card reveal reveal-delay-1" style="grid-column:1/-1">
         <div class="cap-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 0 1 7 7c0 5-7 13-7 13S5 14 5 9a7 7 0 0 1 7-7z"/><circle cx="12" cy="9" r="2.5"/></svg></div>
         <div class="cap-title">AI &amp; GenAI Tooling</div>
+        <div class="cap-evidence">ICPM Generative AI Co-Strategist module (In progress, Nov 2026); LLM-powered workflows in daily use</div>
         <div class="cap-tags"><span class="cap-tag">Prompt Engineering</span><span class="cap-tag">LLM-Powered Workflows</span><span class="cap-tag">GenAI Co-Strategist</span><span class="cap-tag">Intelligent Automation</span><span class="cap-tag">OpenAI / Claude</span><span class="cap-tag">AI-Native Product Dev</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 0→1 TRANSFORMATION ══════════ -->
+<section id="transformation" class="section" style="background:var(--page-bg);padding-top:48px;padding-bottom:48px">
+  <div class="section-inner">
+    <div class="transform-banner reveal">
+      <div class="transform-eyebrow">Polaris Smart Metering · Dec 2024 → Present</div>
+      <h2 class="transform-h">One engineer joins.<br>Six operational domains running on<br><span>disconnected manual processes.</span></h2>
+      <p class="transform-body">When I joined Polaris in December 2024, smart meter manufacturing was running on WhatsApp messages, paper logbooks and spreadsheets. No live production visibility. No structured field issue tracking. No serial traceability. No delivery predictability. Within months — while simultaneously leading 14 engineers across HES, MDMS and Prepaid programs — I conceived, defined and shipped three software products and four governance frameworks that transformed how the company operates.</p>
+      <div class="transform-cols">
+        <div class="transform-col">
+          <div class="transform-col-label">Products Shipped</div>
+          <div class="transform-col-val">3 + 4</div>
+          <div class="transform-col-desc">Merak, FIT, SNM — plus R&amp;D gate, automation workflow, SLA triage &amp; PTJGM</div>
+        </div>
+        <div class="transform-col">
+          <div class="transform-col-label">Domains Transformed</div>
+          <div class="transform-col-val">6</div>
+          <div class="transform-col-desc">Production, serial traceability, field issues, firmware, testing &amp; cross-team coordination</div>
+        </div>
+        <div class="transform-col">
+          <div class="transform-col-label">Time to Delivery</div>
+          <div class="transform-col-val">&lt;1 yr</div>
+          <div class="transform-col-desc">All products conceived and shipped to production in under a year from zero</div>
+        </div>
       </div>
     </div>
   </div>
@@ -604,58 +668,86 @@ footer{text-align:center;padding:24px;font-size:.78rem;color:var(--muted);backgr
 
     <!-- Product Ecosystem -->
     <div class="reveal" style="margin-bottom:16px">
-      <h3 style="font-family:var(--ff-head);font-weight:700;font-size:1.3rem;color:var(--ink);margin-bottom:16px">E. Product Ecosystem</h3>
+      <h3 style="font-family:var(--ff-head);font-weight:700;font-size:1.3rem;color:var(--ink);margin-bottom:16px">E. What Was Built</h3>
     </div>
-    <div class="eco-grid">
+
+    <div class="products-section-label reveal">Shipped Software Products <span>Live in production</span></div>
+    <div class="eco-grid" style="margin-top:0;margin-bottom:40px">
       <div class="eco-card reveal reveal-delay-1">
-        <div class="eco-tag">Platform</div>
+        <div class="eco-tag">Intelligence Platform</div>
         <div class="eco-title">MERAK</div>
-        <div class="eco-sub">Polagram Intelligence Platform - Live operational analytics</div>
+        <div class="eco-sub">Polagram Intelligence Platform — Live operational analytics for manufacturing</div>
         <ul class="eco-feats">
-          <li>Real-time manufacturing analytics across 6 stations</li>
-          <li>4 meter families tracked with live KPIs</li>
-          <li>12 screens covering full production workflow</li>
-          <li>&lt;1.4s data ingestion latency</li>
+          <li>Real-time production counter across 6 manufacturing stations</li>
+          <li>4 single-phase meter families tracked with live KPIs</li>
+          <li>12 screens covering firmware, calibration, testing &amp; dispatch</li>
+          <li>&lt;1.4s data ingestion latency for live accuracy</li>
           <li>Live at merak.polagram.in</li>
         </ul>
-        <div class="eco-stat">Impact: <strong>Full production visibility</strong> for engineering &amp; management</div>
+        <div class="eco-stat">Impact: <strong>Full production visibility</strong> across engineering &amp; management</div>
       </div>
       <div class="eco-card reveal reveal-delay-2">
         <div class="eco-tag">Issue Tracker</div>
         <div class="eco-title">FIT</div>
-        <div class="eco-sub">Field Issue Tracker - 7-stage lifecycle management</div>
+        <div class="eco-sub">Field Issue Tracker — 7-stage lifecycle, Jira-integrated</div>
         <ul class="eco-feats">
           <li>7-stage lifecycle: Draft → Open → In Progress → On Hold → Resolved → Verified → Closed</li>
-          <li>Jira-integrated with automated status sync</li>
-          <li>RBAC, evidence management, email alerts</li>
-          <li>20+ users, 100+ field issues tracked</li>
+          <li>Jira-integrated with automated status sync and email alerts</li>
+          <li>RBAC across Production, QA, R&amp;D and Management roles</li>
+          <li>20+ active users, 100+ field issues tracked</li>
         </ul>
-        <div class="eco-stat">Impact: <strong>Zero lost field issues</strong> - structured resolution workflow</div>
+        <div class="eco-stat">Impact: <strong>Zero lost field issues</strong> — paper logs replaced entirely</div>
       </div>
-      <div class="eco-card reveal reveal-delay-3">
+      <div class="eco-card reveal reveal-delay-3" style="grid-column:1/-1">
         <div class="eco-tag">Manufacturing</div>
         <div class="eco-title">SNM</div>
-        <div class="eco-sub">Serial Number Management - Production traceability</div>
-        <ul class="eco-feats">
+        <div class="eco-sub">Serial Number Management — Production traceability for 1,000+ device deployments</div>
+        <ul class="eco-feats" style="display:grid;grid-template-columns:1fr 1fr;gap:6px">
           <li>Batch generation up to 1,000 serial numbers</li>
           <li>Duplicate &amp; range-overlap detection</li>
           <li>Immutable records with full audit trails</li>
-          <li>CSV, JSON and Excel export</li>
+          <li>CSV, JSON and Excel export formats</li>
+          <li>RBAC per production, QA and R&amp;D role</li>
           <li>Live at snm.polagram.in</li>
         </ul>
-        <div class="eco-stat">Impact: <strong>100% serial traceability</strong> - zero manual errors</div>
+        <div class="eco-stat">Impact: <strong>100% serial traceability</strong> — manual errors eliminated</div>
       </div>
-      <div class="eco-card reveal reveal-delay-4">
+    </div>
+
+    <div class="products-section-label reveal">Process &amp; Governance Frameworks <span>Adopted org-wide</span></div>
+    <div class="eco-grid" style="margin-top:0;grid-template-columns:repeat(3,1fr)">
+      <div class="eco-card reveal reveal-delay-1">
         <div class="eco-tag">Ops Process</div>
         <div class="eco-title">PTJGM</div>
-        <div class="eco-sub">Production Tool &amp; JIG Management - SLA-driven triage</div>
+        <div class="eco-sub">Production Tool &amp; JIG Management — SLA-driven triage</div>
         <ul class="eco-feats">
           <li>Critical: 2h | High: 4h | Medium: 1 day | Low: 2 days</li>
-          <li>RCA &amp; CAPA structured workflows</li>
+          <li>Structured RCA &amp; CAPA workflows</li>
           <li>Adopted across Production, QA &amp; R&amp;D</li>
-          <li>Cross-functional visibility into tool status</li>
         </ul>
-        <div class="eco-stat">Impact: <strong>3+/qtr slippages prevented</strong> - structured escalation</div>
+        <div class="eco-stat">Impact: <strong>Structured escalation</strong> — no ambiguity in tool downtime</div>
+      </div>
+      <div class="eco-card reveal reveal-delay-2">
+        <div class="eco-tag">Release Governance</div>
+        <div class="eco-title">R&amp;D-to-NPI Gate</div>
+        <div class="eco-sub">Multi-stakeholder release checklist — firmware, HES, BCS &amp; hardware</div>
+        <ul class="eco-feats">
+          <li>All deliverables verified before manufacturing handoff</li>
+          <li>Coordinated sign-offs across 6+ stakeholders</li>
+          <li>Prevented 3+ major delivery slippages per quarter</li>
+        </ul>
+        <div class="eco-stat">Impact: <strong>Program predictability</strong> — delivery dates became reliable</div>
+      </div>
+      <div class="eco-card reveal reveal-delay-3">
+        <div class="eco-tag">Automation Governance</div>
+        <div class="eco-title">5-Phase Workflow</div>
+        <div class="eco-sub">Automation dev &amp; validation — quality gates, Git control</div>
+        <ul class="eco-feats">
+          <li>5 phases: concept → review → develop → validate → release</li>
+          <li>Quality gates and SOP compliance at each phase</li>
+          <li>60%+ deployment cycle reduction</li>
+        </ul>
+        <div class="eco-stat">Impact: <strong>Zero unreviewed scripts</strong> in production</div>
       </div>
     </div>
   </div>
@@ -737,37 +829,37 @@ footer{text-align:center;padding:24px;font-size:.78rem;color:var(--muted);backgr
     <div class="impact-grid" style="margin-top:40px">
       <div class="impact-card reveal reveal-delay-1">
         <div class="impact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
-        <div class="impact-num" data-target="90" data-suffix="%+">0%+</div>
+        <div class="impact-num" data-target="90" data-suffix="%+">90%+</div>
         <div class="impact-label">On-Time Delivery</div>
         <div class="impact-tag tag-green">↑ from 60%</div>
       </div>
       <div class="impact-card reveal reveal-delay-2">
         <div class="impact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
-        <div class="impact-num" data-target="14" data-suffix="+">0+</div>
+        <div class="impact-num" data-target="14" data-suffix="+">14+</div>
         <div class="impact-label">Engineers Led</div>
         <div class="impact-tag tag-gold">Cross-functional team</div>
       </div>
       <div class="impact-card reveal reveal-delay-3">
         <div class="impact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-        <div class="impact-num" data-target="40" data-suffix="%">0%</div>
+        <div class="impact-num" data-target="40" data-suffix="%">40%</div>
         <div class="impact-label">Cycle Time Reduced</div>
         <div class="impact-tag tag-green">↓ Faster delivery</div>
       </div>
       <div class="impact-card reveal reveal-delay-1">
         <div class="impact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
-        <div class="impact-num" data-target="60" data-suffix="%+">0%+</div>
+        <div class="impact-num" data-target="60" data-suffix="%+">60%+</div>
         <div class="impact-label">Deploy Effort Cut</div>
         <div class="impact-tag tag-green">↓ Less manual effort</div>
       </div>
       <div class="impact-card reveal reveal-delay-2">
         <div class="impact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
-        <div class="impact-num" data-target="3" data-suffix="+/qtr">0+/qtr</div>
+        <div class="impact-num" data-target="3" data-suffix="+/qtr">3+/qtr</div>
         <div class="impact-label">Slippages Prevented</div>
         <div class="impact-tag tag-green">↑ Program predictability</div>
       </div>
       <div class="impact-card reveal reveal-delay-3">
         <div class="impact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-        <div class="impact-num" data-target="7" data-suffix="">0</div>
+        <div class="impact-num" data-target="7" data-suffix="">7</div>
         <div class="impact-label">IEEE/Springer Publications</div>
         <div class="impact-tag tag-gold">Research &amp; innovation</div>
       </div>
@@ -995,13 +1087,15 @@ var cio = new IntersectionObserver(function(entries){
     document.querySelectorAll('.impact-num[data-target]').forEach(function(el){
       var target = parseInt(el.dataset.target);
       var suffix = el.dataset.suffix || '';
-      var dur = 1200, start = null;
+      var dur = 1400, start = null;
+      el.textContent = '0' + suffix;
       function step(ts){
         if(!start) start = ts;
         var p = Math.min((ts - start) / dur, 1);
         var ease = 1 - Math.pow(1 - p, 3);
         el.textContent = Math.round(ease * target) + suffix;
         if(p < 1) requestAnimationFrame(step);
+        else el.textContent = target + suffix;
       }
       requestAnimationFrame(step);
     });
