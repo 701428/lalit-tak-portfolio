@@ -137,28 +137,6 @@ body{
 </style>
 
 <div class="print-bar">
-  <span><strong>Lalit Tak</strong> — Product Manager CV &nbsp;·&nbsp; Use your browser's print dialog to save as PDF</span>
-  <button class="btn-print" id="dlBtn" onclick="downloadCV()">⬇ Download CV (PDF)</button>
-  <script>
-  async function downloadCV(){
-    var btn=document.getElementById('dlBtn');
-    btn.textContent='Preparing…';btn.disabled=true;
-    try{
-      var downloads=await claude.use('downloads');
-      if(!downloads){btn.textContent='⬇ Download CV (PDF)';btn.disabled=false;return;}
-      var res=await fetch('/_blob/3afc371d69d8866ad32e7622c036cca0');
-      var blob=await res.blob();
-      await downloads.save({filename:'Lalit_Tak_PM_CV.pdf',data:blob});
-      btn.textContent='✓ Downloaded!';
-      setTimeout(function(){btn.textContent='⬇ Download CV (PDF)';btn.disabled=false;},2000);
-    }catch(e){
-      btn.textContent='⬇ Download CV (PDF)';btn.disabled=false;
-    }
-  }
-  </script>
-</div>
-
-<div class="print-bar">
   <span><strong>Lalit Tak</strong> &mdash; Product Manager Resume</span>
   <a class="btn-print" href="Lalit_Tak_Resume.pdf" download="Lalit_Tak_Resume.pdf">&#8595; Download Resume (PDF)</a>
 </div>
