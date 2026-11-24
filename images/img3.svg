@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <!-- Background circle -->
+  <circle cx="200" cy="200" r="200" fill="#F5EFE0"/>
+
+  <!-- Neck -->
+  <rect x="168" y="255" width="64" height="60" rx="10" fill="#C68B59"/>
+
+  <!-- Collar/Uniform body -->
+  <ellipse cx="200" cy="360" rx="130" ry="80" fill="#1a2a4a"/>
+  <!-- Collar flaps -->
+  <polygon points="200,290 160,330 180,290" fill="#f0f0f0"/>
+  <polygon points="200,290 240,330 220,290" fill="#f0f0f0"/>
+  <!-- Polaris P badge -->
+  <rect x="186" y="318" width="28" height="20" rx="4" fill="#C8961A"/>
+  <text x="200" y="333" text-anchor="middle" font-family="Arial" font-size="13" font-weight="900" fill="#fff">P</text>
+  <!-- ID lanyard -->
+  <line x1="200" y1="295" x2="195" y2="345" stroke="#2a7fd4" stroke-width="3"/>
+  <rect x="188" y="345" width="20" height="14" rx="2" fill="#fff" stroke="#ccc" stroke-width="1"/>
+
+  <!-- Head -->
+  <ellipse cx="200" cy="195" rx="82" ry="88" fill="#C68B59"/>
+
+  <!-- Hair -->
+  <ellipse cx="200" cy="130" rx="82" ry="45" fill="#2C1A0E"/>
+  <ellipse cx="145" cy="155" rx="25" ry="38" fill="#2C1A0E"/>
+  <ellipse cx="255" cy="155" rx="25" ry="38" fill="#2C1A0E"/>
+  <!-- Hair top detail -->
+  <path d="M128,148 Q155,105 200,108 Q245,105 272,148 Q245,118 200,122 Q155,118 128,148Z" fill="#3D2512"/>
+
+  <!-- Ears -->
+  <ellipse cx="118" cy="205" rx="13" ry="16" fill="#B87748"/>
+  <ellipse cx="282" cy="205" rx="13" ry="16" fill="#B87748"/>
+  <ellipse cx="118" cy="205" rx="8" ry="11" fill="#C68B59"/>
+  <ellipse cx="282" cy="205" rx="8" ry="11" fill="#C68B59"/>
+
+  <!-- Eyebrows -->
+  <path d="M155,172 Q172,163 188,167" stroke="#2C1A0E" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M212,167 Q228,163 245,172" stroke="#2C1A0E" stroke-width="4" fill="none" stroke-linecap="round"/>
+
+  <!-- Eyes -->
+  <ellipse cx="171" cy="186" rx="16" ry="13" fill="#fff"/>
+  <ellipse cx="229" cy="186" rx="16" ry="13" fill="#fff"/>
+  <circle cx="174" cy="187" r="9" fill="#3D2512"/>
+  <circle cx="232" cy="187" r="9" fill="#3D2512"/>
+  <circle cx="176" cy="184" r="4" fill="#1a0d05"/>
+  <circle cx="234" cy="184" r="4" fill="#1a0d05"/>
+  <!-- Eye shine -->
+  <circle cx="179" cy="182" r="2.5" fill="#fff"/>
+  <circle cx="237" cy="182" r="2.5" fill="#fff"/>
+  <!-- Lashes upper -->
+  <path d="M155,178 Q163,170 171,174" stroke="#2C1A0E" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M213,174 Q221,170 229,178" stroke="#2C1A0E" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+  <!-- Nose -->
+  <ellipse cx="200" cy="213" rx="10" ry="7" fill="#B87748"/>
+  <circle cx="193" cy="215" r="4" fill="#A86438"/>
+  <circle cx="207" cy="215" r="4" fill="#A86438"/>
+
+  <!-- Smile -->
+  <path d="M174,238 Q200,258 226,238" stroke="#8B4513" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- Teeth -->
+  <path d="M183,241 Q200,254 217,241 Q200,248 183,241Z" fill="#fff"/>
+
+  <!-- Mustache/stubble -->
+  <path d="M183,228 Q200,236 217,228" stroke="#2C1A0E" stroke-width="2" fill="none" stroke-linecap="round" opacity=".6"/>
+  <!-- Stubble dots -->
+  <circle cx="178" cy="232" r="1.5" fill="#2C1A0E" opacity=".4"/>
+  <circle cx="183" cy="237" r="1.5" fill="#2C1A0E" opacity=".4"/>
+  <circle cx="221" cy="232" r="1.5" fill="#2C1A0E" opacity=".4"/>
+  <circle cx="216" cy="237" r="1.5" fill="#2C1A0E" opacity=".4"/>
+
+  <!-- Hard hat (safety helmet) on side -->
+  <ellipse cx="275" cy="145" rx="30" ry="18" fill="#C8961A" opacity=".9"/>
+  <rect x="250" y="143" width="50" height="10" rx="3" fill="#C8961A"/>
+  <ellipse cx="275" cy="143" rx="28" ry="6" fill="#E8A820"/>
+</svg>
