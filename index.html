@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Lalit Tak - PM Portfolio | Product Manager & Engineering Lead</title>
+<title>Lalit Tak - PM Portfolio | Product Manager, B2B Platforms & Enterprise Software</title>
 <meta name="description"
-  content="Lalit Tak - Product Manager &amp; Engineering Lead specialising in smart metering, HES, MDMS and B2B enterprise platforms, smart metering (HES, MDMS, Prepaid) and B2B IoT products. Based in Jaipur, India.">
-<meta property="og:title" content="Lalit Tak - PM Portfolio">
+  content="Lalit Tak - Product Manager with 5+ years building B2B platforms, enterprise software and IoT products. Shipped Merak, FIT and SNM. Led 14+ engineers. Based in Jaipur, India.">
+<meta property="og:title" content="Lalit Tak - Product Manager">
 <meta property="og:description"
-  content="Product Manager with 5+ years in energy-tech. Led 14+ engineers. Shipped Merak, FIT, SNM. On-time delivery 60%→90%+.">
+  content="Product Manager | B2B Platforms, Enterprise Software &amp; IoT. Built 0-to-1 products adopted across engineering and production teams. Led 14+ engineers, 90%+ on-time delivery.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://lalit-tak-resume.netlify.app">
 <meta property="og:image" content="https://lalit-tak-resume.netlify.app/images/og-preview.svg">
@@ -2312,6 +2312,54 @@
     .mobile-sticky-bar { bottom: env(safe-area-inset-bottom, 0px); padding-bottom: calc(10px + env(safe-area-inset-bottom, 0px)) }
   }
 
+  /* ── ROLE FIT CARDS ── */
+  .role-fit-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px
+  }
+  .role-fit-card {
+    background: #fff;
+    border-radius: var(--r);
+    padding: 24px;
+    box-shadow: var(--shadow);
+    border-top: 4px solid transparent
+  }
+  .rf-strong { border-top-color: var(--green) }
+  .rf-mid { border-top-color: var(--gold) }
+  .rf-role {
+    font-family: var(--ff-head);
+    font-weight: 700;
+    font-size: .95rem;
+    color: var(--ink);
+    margin-bottom: 6px
+  }
+  .rf-score {
+    font-size: .72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    margin-bottom: 12px
+  }
+  .rf-strong .rf-score { color: var(--green) }
+  .rf-mid .rf-score { color: var(--gold) }
+  .rf-evidence {
+    font-size: .83rem;
+    color: var(--body);
+    line-height: 1.65;
+    margin-bottom: 10px
+  }
+  .rf-gap {
+    font-size: .8rem;
+    color: var(--muted);
+    line-height: 1.6;
+    padding-top: 10px;
+    border-top: 1px solid var(--page-bg)
+  }
+  @media(max-width:768px) {
+    .role-fit-grid { grid-template-columns: 1fr }
+  }
+
   /* ── RESPONSIVE GRID HELPERS ── */
   .biz-ctx-grid {
     display: grid;
@@ -2356,6 +2404,7 @@
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#capabilities">Skills</a></li>
+      <li><a href="#role-fit">Role Fit</a></li>
       <li><a href="#transformation">0→1 Story</a></li>
       <li><a href="#decisions">Decisions</a></li>
       <li><a href="#case-study">Case Study</a></li>
@@ -2379,6 +2428,7 @@
 <div class="nav-mobile" id="navMobile">
   <a href="#about" class="nav-mobile-link">About</a>
   <a href="#capabilities" class="nav-mobile-link">Skills</a>
+  <a href="#role-fit" class="nav-mobile-link">Role Fit</a>
   <a href="#transformation" class="nav-mobile-link">0→1 Story</a>
   <a href="#decisions" class="nav-mobile-link">Decisions</a>
   <a href="#case-study" class="nav-mobile-link">Case Study</a>
@@ -2400,13 +2450,10 @@
 <section id="hero">
   <div class="hero-inner">
     <div class="hero-left">
-      <div class="hero-eyebrow">Product Manager &middot; Engineering Lead &middot; IoT &middot; Energy Tech
+      <div class="hero-eyebrow">Product Manager &middot; B2B Platforms &middot; Enterprise Software &middot; IoT
       </div>
-      <h1 class="hero-h1">Led 14+ engineers.<br>Shipped 4 platforms.<br>Delivered <span class="g">results.</span></h1>
-      <p class="hero-sub">Technical Product Manager with 5+ years in energy-tech - owning product lifecycle across HES,
-        MDMS, Prepaid and manufacturing platforms at Polaris Smart Metering. I turn field problems into shipped
-        software, from 0 to production. On-time delivery lifted from 60% to 90%+. Cycle time cut by 40%. Deployment
-        effort down 60%+.</p>
+      <h1 class="hero-h1">I build products that simplify complex business operations, connect workflows and help teams make <span class="g">better decisions.</span></h1>
+      <p class="hero-sub">Technical Product Manager with 5+ years building enterprise software and B2B platforms in energy-tech and industrial operations. At Polaris Smart Metering I own full product lifecycle - from discovery through PRDs, sprint delivery and stakeholder adoption. On-time delivery lifted from 60% to 90%+. Cycle time cut by 40%.</p>
       <div class="hero-actions">
         <a href="#case-study" class="btn btn-primary">Explore My Work</a>
         <a href="resume.html" target="_blank" rel="noopener noreferrer" class="btn btn-outline">View Resume</a>
@@ -2476,15 +2523,9 @@
       <div class="about-content">
         <h2 class="about-headline reveal">"Engineering taught me how to build. Product taught me what to build."</h2>
         <div class="about-bio reveal reveal-delay-1">
-          <p>I'm a Technical Product Manager with 5+ years of experience in energy-tech and enterprise software.
-            Currently SDE-3 Team Lead at Polaris Smart Metering, Jaipur - where I own the full product lifecycle across
-            HES, MDMS, Prepaid and production-automation platforms with an AI-augmented delivery approach.</p>
-          <p>I lead 14+ engineers using Agile/Scrum, turning ambiguous field problems into PRDs, roadmaps and shipped
-            software. Hands-on with Python, SQL and REST APIs - I combine technical depth with GenAI co-strategist
-            workflows (prompt engineering, LLM-powered analysis) to accelerate discovery and decision-making.</p>
-          <p>Pursuing the International Certificate in Product Management (ICPM) - including a Generative AI
-            Co-Strategist module - from the Institute of Product Leadership, USA. Previously at Secure Meters Ltd.,
-            Udaipur, where I built data-driven smart metering systems at 10,000+ device scale.</p>
+          <p>I'm a Technical Product Manager with 5+ years building B2B enterprise software and operational platforms. I specialise in turning complex, multi-stakeholder business problems into well-scoped products that engineering teams can ship and users actually adopt. Currently SDE-3 Team Lead at Polaris Smart Metering, where I own product lifecycle across internal platforms for manufacturing, field operations and smart metering infrastructure.</p>
+          <p>My domain is industrial and energy-tech, but the PM craft is transferable: I run discovery with frontline users, write PRDs, prioritise with engineering constraints in mind, manage stakeholder alignment across Production, QA and R&amp;D, and iterate based on adoption feedback. I lead 14+ engineers in 2-week Agile sprints - hands-on with Python, SQL and REST APIs, not just managing from a distance.</p>
+          <p>Pursuing the International Certificate in Product Management (ICPM) - including a Generative AI Co-Strategist module - from the Institute of Product Leadership, USA. Previously at Secure Meters Ltd., building data-driven smart metering systems at 10,000+ device scale across utility deployments in India.</p>
         </div>
         <div class="brand-row reveal reveal-delay-2">
           <!-- JIRA -->
@@ -2649,7 +2690,7 @@
             </div>
             <div class="cap-tags"><span class="cap-tag">Data-Driven Decisions</span><span class="cap-tag">KPI
                 Tracking</span><span class="cap-tag">Operational Analytics</span><span class="cap-tag">ML-Driven
-                Insights</span><span class="cap-tag">ETL / SQL</span><span class="cap-tag">Mixpanel</span></div>
+                Insights</span><span class="cap-tag">ETL / SQL</span></div>
           </div>
           <div class="cap-card reveal reveal-delay-2">
             <div class="cap-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -2697,8 +2738,43 @@
       </div>
     </section>
 
+    <!-- ══════════ ROLE FIT ══════════ -->
+    <section id="role-fit" class="section" style="background:var(--cream)">
+      <div class="section-inner">
+        <div class="section-eyebrow reveal">Hiring Assessment</div>
+        <h2 class="section-title reveal">Where I Can Make an <span class="g">Impact</span></h2>
+        <p class="section-sub reveal">My domain is industrial and energy-tech. The PM craft is transferable. Here's an honest assessment of fit across four role types.</p>
+        <div class="role-fit-grid reveal">
+          <div class="role-fit-card rf-strong">
+            <div class="rf-role">Industrial &amp; Enterprise Software PM</div>
+            <div class="rf-score">Strong fit</div>
+            <div class="rf-evidence">Direct evidence: 4 internal platforms shipped (Merak, FIT, SNM, PTJGM). Multi-stakeholder discovery, PRDs, RBAC, workflow design, Jira integration, cross-team rollout, iterative improvement based on user feedback. Users are domain experts with high expectations.</div>
+            <div class="rf-gap">Gap: No formal B2B contract lifecycle or procurement involvement.</div>
+          </div>
+          <div class="role-fit-card rf-strong">
+            <div class="rf-role">Energy-Tech &amp; IoT PM</div>
+            <div class="rf-score">Strong fit</div>
+            <div class="rf-evidence">5+ years in smart metering (HES, MDMS, Prepaid), 10,000+ device deployments at Secure Meters, firmware calibration, AMI infrastructure, production automation, 7 peer-reviewed papers on smart grids and cybersecurity in energy systems.</div>
+            <div class="rf-gap">Gap: Consumer energy products (smart home, EV) are adjacent but not direct experience.</div>
+          </div>
+          <div class="role-fit-card rf-mid">
+            <div class="rf-role">B2B SaaS PM</div>
+            <div class="rf-score">Transferable fit</div>
+            <div class="rf-evidence">Core PM skills demonstrated: user discovery, workflow design, MVP scoping, stakeholder alignment, cross-functional execution, adoption tracking. Products are internal enterprise tools — structurally similar to B2B SaaS for multi-role organisations.</div>
+            <div class="rf-gap">Gap: No ARR ownership, pricing strategy, churn or external customer acquisition experience. Would benefit from a B2B SaaS domain with existing engineering fluency (developer tools, operations, IoT, infrastructure).</div>
+          </div>
+          <div class="role-fit-card rf-mid">
+            <div class="rf-role">Platform &amp; Technical PM</div>
+            <div class="rf-score">Good fit</div>
+            <div class="rf-evidence">Technically fluent: Python, SQL, REST APIs, PostgreSQL, CI/CD concepts used daily. Defined integrations (Jira sync, automated alerts, data pipelines), not just features. Comfortable in engineering-heavy environments and translating between business requirements and technical constraints.</div>
+            <div class="rf-gap">Gap: No public API product, SDK or platform-as-a-product experience to date.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ══════════ PRODUCT DECISIONS ══════════ -->
-    <section id="decisions" class="section" style="background:var(--cream)">
+    <section id="decisions" class="section" style="background:var(--page-bg)">
       <div class="section-inner">
         <div class="section-eyebrow reveal">Product Thinking</div>
         <h2 class="section-title reveal">How I Make Product <span class="g">Decisions</span></h2>
@@ -2811,9 +2887,9 @@
     <section id="case-study" class="section">
       <div class="section-inner">
         <div class="section-eyebrow reveal">Featured Case Study</div>
-        <h2 class="section-title reveal">Building Smart Metering Products:<br>A True <span class="g">0→1 Story</span>
+        <h2 class="section-title reveal">Building Enterprise Operational Platforms:<br>A True <span class="g">0→1 Story</span>
         </h2>
-        <p class="section-sub reveal">From fragmented manual processes to connected operational intelligence.</p>
+        <p class="section-sub reveal">How I discovered user problems, designed products and shipped connected operational software across a 150+ person engineering organisation.</p>
 
         <div class="cs-meta reveal">
           <div class="cs-meta-item">
@@ -2830,7 +2906,7 @@
           </div>
           <div class="cs-meta-item">
             <div class="cs-meta-label">Domain</div>
-            <div class="cs-meta-val">Smart Metering / Manufacturing</div>
+            <div class="cs-meta-val">Enterprise Software / Industrial Operations</div>
           </div>
           <div class="cs-meta-item">
             <div class="cs-meta-label">Products Shipped</div>
@@ -3223,8 +3299,8 @@
     <section id="ui-showcase" class="section">
       <div class="section-inner">
         <div class="section-eyebrow reveal">Product Interfaces</div>
-        <h2 class="section-title reveal">From Concept to <span class="g">Interface</span></h2>
-        <p class="section-sub reveal">Actual screenshots from live production systems - not mockups.</p>
+        <h2 class="section-title reveal">Products I <span class="g">Owned &amp; Shipped</span></h2>
+        <p class="section-sub reveal">Actual screenshots from live production systems. Each product started from a real user problem, went through discovery, prioritisation and stakeholder alignment before shipping.</p>
 
         <div class="tab-bar reveal">
           <button class="tab-btn active" onclick="setTab(this,'merak')">Merak Dashboard</button>
@@ -3252,6 +3328,7 @@
             <div class="tag"
               style="display:inline-block;background:var(--green-bg);color:var(--green);font-size:.72rem;font-weight:700;padding:3px 10px;border-radius:999px;margin-bottom:16px">
               ● Live at merak.polagram.in</div>
+            <p style="font-size:.88rem;color:var(--muted);margin-bottom:16px;line-height:1.6"><strong style="color:var(--ink)">Problem:</strong> Production leads had no real-time visibility into station throughput or firmware calibration. Status came via end-of-shift verbal reports — often incomplete. <strong style="color:var(--ink)">My decision:</strong> Prioritise live dashboard and WIP tracking for MVP; deferred user authentication tiers and export features to v2 based on stakeholder input.</p>
             <ul class="showcase-feats">
               <li>
                 <div class="feat-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2">
@@ -3299,6 +3376,7 @@
             <div
               style="display:inline-block;background:var(--green-bg);color:var(--green);font-size:.72rem;font-weight:700;padding:3px 10px;border-radius:999px;margin-bottom:16px">
               ● Internal Production System</div>
+            <p style="font-size:.88rem;color:var(--muted);margin-bottom:16px;line-height:1.6"><strong style="color:var(--ink)">Problem:</strong> Field issues were reported via email and WhatsApp with no ownership, no lifecycle, no SLA. Issues fell through the cracks between Production, QA and R&amp;D. <strong style="color:var(--ink)">My decision:</strong> Built a workflow tool — not just a tracker — with RBAC and Jira sync as MVP requirements, because cross-team access and existing tool integration were blockers to adoption.</p>
             <ul class="showcase-feats">
               <li>
                 <div class="feat-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2">
@@ -3346,6 +3424,7 @@
             <div
               style="display:inline-block;background:var(--green-bg);color:var(--green);font-size:.72rem;font-weight:700;padding:3px 10px;border-radius:999px;margin-bottom:16px">
               ● Live at snm.polagram.in</div>
+            <p style="font-size:.88rem;color:var(--muted);margin-bottom:16px;line-height:1.6"><strong style="color:var(--ink)">Problem:</strong> Serial numbers were allocated manually in Excel with no duplicate detection or audit trail. At 1,000+ device deployments, this caused traceability failures downstream. <strong style="color:var(--ink)">My decision:</strong> RBAC and immutable audit trails were non-negotiable in scope; mobile interface and advanced reporting were deferred post v1 adoption.</p>
             <ul class="showcase-feats">
               <li>
                 <div class="feat-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2">

@@ -128,6 +128,17 @@ body{
   .section{page-break-inside:avoid}
   .exp{page-break-inside:avoid}
 }
+@page{
+  size: A4;
+  margin: 18mm 14mm 20mm 14mm;
+}
+@page:first{
+  margin-top: 10mm;
+}
+@page:left,@page:right{
+  @bottom-left{ content: "Lalit Tak"; font-family: 'Inter', sans-serif; font-size: 8pt; color: #888 }
+  @bottom-right{ content: "Page " counter(page); font-family: 'Inter', sans-serif; font-size: 8pt; color: #888 }
+}
 @media(max-width:600px){
   .cv-name{font-size:1.8rem}
   .cv-head,.cv-body{padding-left:20px;padding-right:20px}
@@ -148,7 +159,7 @@ body{
   <!-- Header -->
   <div class="cv-head">
     <h1 class="cv-name">Lalit <span>Tak</span></h1>
-    <div class="cv-title">Product Manager &nbsp;|&nbsp; Technical PM &nbsp;|&nbsp; B2B Platforms, IoT &amp; Smart Metering (HES, MDMS, Prepaid)</div>
+    <div class="cv-title">Product Manager &nbsp;|&nbsp; B2B Platforms, Enterprise Software &amp; IoT &nbsp;|&nbsp; Smart Metering (HES, MDMS, Prepaid)</div>
     <div class="cv-contacts">
       <span class="cv-contact">Jaipur, India</span>
       <span class="cv-contact"><a href="tel:+917014281550">+91 70142 81550</a></span>
@@ -164,7 +175,7 @@ body{
     <div class="section">
       <h2 class="section-head">Professional Summary</h2>
       <p class="summary">
-        Technical Product Manager with 5+ years in energy-tech, owning the full product lifecycle across HES, MDMS, Prepaid and production-automation platforms at Polaris Smart Metering. Conceived and shipped Merak, FIT and SNM &mdash; 0-to-1 AI-native products adopted across engineering and production teams. Led 14+ engineers; raised on-time delivery from 60% to 90%+, cut cycle time by 40% and deployment effort by 60%+.
+        Technical Product Manager with 5+ years building B2B enterprise software and operational platforms in energy-tech and industrial operations. At Polaris Smart Metering I own the full product lifecycle &mdash; from user discovery and PRDs through cross-functional delivery and adoption &mdash; across HES, MDMS, Prepaid and production-automation workstreams. Conceived and shipped Merak, FIT and SNM: 0-to-1 workflow and intelligence platforms adopted by 20+ team members across Production, QA and R&amp;D. Led 14+ engineers; raised on-time delivery from 60% to 90%+, cut cycle time by 40%.
       </p>
     </div>
 
