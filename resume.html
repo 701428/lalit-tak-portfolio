@@ -123,10 +123,22 @@ body{
   body{background:#fff;padding:0}
   .print-bar{display:none}
   .cv{border-radius:0;box-shadow:none;max-width:100%}
-  .cv-body{padding:28px 36px 36px}
-  .cv-head{padding:30px 36px 26px}
-  .section{page-break-inside:avoid}
-  .exp{page-break-inside:avoid}
+  .cv-body{padding:20px 32px 28px}
+  .cv-head{padding:20px 32px 18px}
+  .cv-head::before{display:none}
+  .cv-name{font-size:1.8rem}
+  .cv-title{font-size:.8rem}
+  .summary{font-size:.82rem}
+  .section{margin-bottom:18px}
+  .section-head{font-size:.62rem;margin-bottom:10px;padding-bottom:4px}
+  .exp{page-break-inside:avoid;margin-bottom:12px}
+  .exp ul li{font-size:.78rem;margin-bottom:3px}
+  .exp-role{font-size:.82rem}
+  .exp-org{font-size:.84rem}
+  .edu-list{font-size:.8rem}
+  .skill-row{font-size:.78rem;margin-bottom:6px}
+  .proj{font-size:.78rem}
+  .proj-list .proj{margin-bottom:6px}
 }
 @page{
   size: A4;
@@ -159,7 +171,7 @@ body{
   <!-- Header -->
   <div class="cv-head">
     <h1 class="cv-name">Lalit <span>Tak</span></h1>
-    <div class="cv-title">Product Manager &nbsp;|&nbsp; B2B Platforms, Enterprise Software &amp; IoT &nbsp;|&nbsp; Smart Metering (HES, MDMS, Prepaid)</div>
+    <div class="cv-title">Technical Product Manager &nbsp;|&nbsp; Enterprise Platforms &amp; Industrial IoT &nbsp;|&nbsp; Smart Metering (HES, MDMS, Prepaid)</div>
     <div class="cv-contacts">
       <span class="cv-contact">Jaipur, India</span>
       <span class="cv-contact"><a href="tel:+917014281550">+91 70142 81550</a></span>
@@ -175,7 +187,7 @@ body{
     <div class="section">
       <h2 class="section-head">Professional Summary</h2>
       <p class="summary">
-        Technical Product Manager with 5+ years building B2B enterprise software and operational platforms in energy-tech and industrial operations. At Polaris Smart Metering I own the full product lifecycle &mdash; from user discovery and PRDs through cross-functional delivery and adoption &mdash; across HES, MDMS, Prepaid and production-automation workstreams. Conceived and shipped Merak, FIT and SNM: 0-to-1 workflow and intelligence platforms adopted by 20+ team members across Production, QA and R&amp;D. Led 14+ engineers; raised on-time delivery from 60% to 90%+, cut cycle time by 40%.
+        Technical Product Manager with 5+ years building B2B enterprise software and operational platforms in energy-tech and industrial operations. At Polaris Smart Metering I own the full product lifecycle &mdash; from user discovery and PRDs through cross-functional delivery and adoption &mdash; across HES, MDMS, Prepaid and production-automation workstreams. Conceived and shipped Merak, FIT and SNM: 0-to-1 workflow and intelligence platforms (FIT adopted by 20+ team members tracking 100+ field issues). Led 14+ engineers; raised on-time delivery from 60% to 90%+, cut cycle time by 40%.
       </p>
     </div>
 
@@ -191,7 +203,7 @@ body{
         <div class="exp-role">SDE-3 Team Lead &nbsp;(Product &amp; engineering lead for HES, MDMS, Prepaid and production automation)</div>
         <ul>
           <li><strong>Product ownership:</strong> End-to-end lifecycle across HES, MDMS, Prepaid and production-automation workstreams &mdash; PRDs, user stories, roadmap, milestones, releases and stakeholder sign-off for a 1,000+ device smart meter deployment.</li>
-          <li><strong>0-to-1 AI-native product:</strong> Conceived and shipped <strong>Merak</strong> (Polagram Intelligence Platform) &mdash; a live operational-intelligence web product surfacing real-time data and streamlining cross-team workflows for engineering and product teams.</li>
+          <li><strong>0-to-1 product:</strong> Conceived and shipped <strong>Merak</strong> (Polagram Intelligence Platform) &mdash; a live operational-intelligence web product surfacing real-time data and streamlining cross-team workflows for engineering and product teams.</li>
           <li><strong>Problem to product:</strong> Built the <strong>Field Issue Tracker (FIT)</strong> &mdash; Jira-integrated, 7-stage lifecycle (Draft &rarr; Closed), RBAC, automated status sync and email alerts; adopted by 20+ team members tracking 100+ field issues.</li>
           <li><strong>Manufacturing platform:</strong> Defined and delivered <strong>Serial Number Management (SNM)</strong> &mdash; production-grade serial generation, tracking and lifecycle management; RBAC, batch generation, audit trails, multi-format export (CSV/JSON/Excel).</li>
           <li><strong>Release management:</strong> Own the R&amp;D-to-NPI release gate, coordinating firmware, HES, BCS and hardware sign-offs across 6+ stakeholders; prevented 3+ major delivery slippages per quarter.</li>
@@ -218,17 +230,6 @@ body{
       </div>
     </div>
 
-    <!-- Products -->
-    <div class="section">
-      <h2 class="section-head">Selected Products &amp; Projects</h2>
-      <div class="proj-list">
-        <div class="proj"><strong>Merak, Polagram Intelligence Platform</strong> &mdash; Live operational-intelligence platform; real-time data and cross-team workflow surface for engineering and product teams. <a href="https://merak.polagram.in" target="_blank">merak.polagram.in</a></div>
-        <div class="proj"><strong>Field Issue Tracker (FIT)</strong> &mdash; React/FastAPI; Jira-integrated; 7-stage lifecycle; RBAC; 20+ users; 100+ field issues tracked.</div>
-        <div class="proj"><strong>Serial Number Management (SNM)</strong> &mdash; Meter manufacturing serial generation, tracking and lifecycle; RBAC; audit trails; CSV/JSON/Excel export. <a href="https://snm.polagram.in/Serialnumbergenerator/" target="_blank">snm.polagram.in</a></div>
-        <div class="proj"><strong>R&amp;D-to-NPI Release Gate</strong> &mdash; Multi-stakeholder checklist ensuring all firmware, HES, BCS and hardware deliverables close before manufacturing.</div>
-        <div class="proj"><strong>5-Phase Automation Dev &amp; Validation Workflow</strong> &mdash; Quality gates, technical review, SOP compliance, Git version control; 60%+ deployment cycle cut.</div>
-      </div>
-    </div>
 
     <!-- Core PM Skills (moved below experience per audit) -->
     <div class="section">
@@ -273,7 +274,8 @@ body{
     <div class="section">
       <h2 class="section-head">Certifications &amp; Publications</h2>
       <div class="cert-list">
-        <div class="cert"><strong>International Certificate in Product Management (ICPM)</strong> &mdash; Institute of Product Leadership, USA (In progress, expected Nov 2026). Modules: PM Fundamentals &middot; Product Design (Figma, Balsamiq, Miro) &middot; Agile PM &middot; Go-to-Market Strategy &middot; Data-Driven Products (Mixpanel, GA) &middot; <em>Generative AI Co-Strategist</em></div>
+        <div class="cert"><strong>International Certificate in Product Management (ICPM)</strong> &mdash; Institute of Product Leadership, USA (In progress, Nov 2026). Modules: PM Fundamentals &middot; Product Design (Figma, Balsamiq, Miro) &middot; Agile PM &middot; Go-to-Market Strategy &middot; Data-Driven Products &middot; <em>Generative AI Co-Strategist</em></div>
+        <div class="cert"><strong>Go-To-Market Skillathon Winner</strong> &mdash; Institute of Product Leadership (Nov 14, 2026). Built end-to-end GTM strategy for FROZO (Jain/Satvik/Vaishnav food delivery): market research, positioning, pricing, acquisition and financial planning. Certificate of Recognition.</div>
         <div class="cert"><strong>Fundamentals of Project Planning and Management</strong> &mdash; University of Virginia (Coursera), 2020</div>
         <div class="cert"><strong>Effective Problem-Solving and Decision-Making</strong> &mdash; UC Irvine (Coursera), 2020</div>
         <div class="cert"><strong>Machine Learning for All</strong> &mdash; University of London (Coursera), 2020</div>

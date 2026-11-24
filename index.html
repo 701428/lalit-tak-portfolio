@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Lalit Tak - PM Portfolio | Product Manager, B2B Platforms & Enterprise Software</title>
+<title>Lalit Tak – Technical Product Manager | Enterprise Workflow & Operations Platforms</title>
 <meta name="description"
   content="Lalit Tak - Product Manager with 5+ years building B2B platforms, enterprise software and IoT products. Shipped Merak, FIT and SNM. Led 14+ engineers. Based in Jaipur, India.">
 <meta property="og:title" content="Lalit Tak - Product Manager">
@@ -31,8 +31,24 @@
     padding: 0
   }
 
+  .skip-link {
+    position: absolute;
+    top: -100%;
+    left: 8px;
+    background: var(--ink);
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 0 0 6px 6px;
+    font-size: .875rem;
+    font-weight: 600;
+    text-decoration: none;
+    z-index: 9999
+  }
+  .skip-link:focus { top: 0 }
+
   :root {
     --gold: #C8961A;
+    --gold-text: #7A5500;
     --gold-light: #F6C543;
     --gold-pale: #FFF8E7;
     --cream: #F9F5EC;
@@ -199,7 +215,7 @@
     font-weight: 700;
     letter-spacing: .18em;
     text-transform: uppercase;
-    color: var(--gold);
+    color: var(--gold-text);
     margin-bottom: 12px
   }
 
@@ -545,6 +561,9 @@
 
   .about-photo img {
     width: 100%;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    object-position: center top;
     border-radius: var(--r);
     box-shadow: var(--shadow-md)
   }
@@ -1996,9 +2015,13 @@
     gap: 5px;
     background: none;
     border: none;
-    padding: 6px;
+    padding: 10px;
     cursor: pointer;
-    z-index: 1100
+    z-index: 1100;
+    min-width: 44px;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center
   }
 
   .nav-hamburger span {
@@ -2342,7 +2365,7 @@
     margin-bottom: 12px
   }
   .rf-strong .rf-score { color: var(--green) }
-  .rf-mid .rf-score { color: var(--gold) }
+  .rf-mid .rf-score { color: var(--gold-text) }
   .rf-evidence {
     font-size: .83rem;
     color: var(--body);
@@ -2397,6 +2420,7 @@
 <!-- SCROLL PROGRESS -->
 <div id="progress-bar"></div>
 
+<a href="#hero" class="skip-link">Skip to main content</a>
 <!-- NAV -->
 <nav>
   <div class="nav-inner">
@@ -2450,9 +2474,9 @@
 <section id="hero">
   <div class="hero-inner">
     <div class="hero-left">
-      <div class="hero-eyebrow">Product Manager &middot; B2B Platforms &middot; Enterprise Software &middot; IoT
+      <div class="hero-eyebrow">Technical Product Manager &middot; Enterprise Platforms &middot; Industrial IoT
       </div>
-      <h1 class="hero-h1">I build products that simplify complex business operations, connect workflows and help teams make <span class="g">better decisions.</span></h1>
+      <h1 class="hero-h1">I turn messy operations into <span class="g">software teams adopt.</span></h1>
       <p class="hero-sub">Technical Product Manager with 5+ years building enterprise software and B2B platforms in energy-tech and industrial operations. At Polaris Smart Metering I own full product lifecycle - from discovery through PRDs, sprint delivery and stakeholder adoption. On-time delivery lifted from 60% to 90%+. Cycle time cut by 40%.</p>
       <div class="hero-actions">
         <a href="#case-study" class="btn btn-primary">Explore My Work</a>
@@ -2646,7 +2670,7 @@
             <div class="cap-title">Product Strategy</div>
             <div class="cap-evidence">Defined roadmaps for Merak, FIT &amp; SNM - all shipped to production in &lt;1
               year</div>
-            <div class="cap-tags"><span class="cap-tag">AI-First Thinking</span><span class="cap-tag">Roadmap Planning</span><span class="cap-tag">MVP
+            <div class="cap-tags"><span class="cap-tag">Roadmap Planning</span><span class="cap-tag">MVP
                 Definition</span><span class="cap-tag">OKR/KPI</span></div>
           </div>
           <div class="cap-card reveal reveal-delay-2">
@@ -2658,9 +2682,9 @@
             <div class="cap-title">Discovery &amp; UX</div>
             <div class="cap-evidence">Production-floor observation + stakeholder interviews → 6 pain points → 4 shipped
               products</div>
-            <div class="cap-tags"><span class="cap-tag">AI-Augmented Research</span><span class="cap-tag">User
+            <div class="cap-tags"><span class="cap-tag">User
                 Personas</span><span class="cap-tag">Journey Mapping</span><span class="cap-tag">Problem
-                Discovery</span><span class="cap-tag">Design Thinking</span><span class="cap-tag">A/B Testing</span>
+                Discovery</span><span class="cap-tag">Design Thinking</span>
             </div>
           </div>
           <div class="cap-card reveal reveal-delay-3">
@@ -2689,8 +2713,7 @@
             <div class="cap-evidence">Live KPIs across 6 manufacturing stations via Merak; &lt;1.4s ingestion latency
             </div>
             <div class="cap-tags"><span class="cap-tag">Data-Driven Decisions</span><span class="cap-tag">KPI
-                Tracking</span><span class="cap-tag">Operational Analytics</span><span class="cap-tag">ML-Driven
-                Insights</span><span class="cap-tag">ETL / SQL</span></div>
+                Tracking</span><span class="cap-tag">Operational Analytics</span><span class="cap-tag">ETL / SQL</span></div>
           </div>
           <div class="cap-card reveal reveal-delay-2">
             <div class="cap-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -2747,25 +2770,25 @@
         <div class="role-fit-grid reveal">
           <div class="role-fit-card rf-strong">
             <div class="rf-role">Industrial &amp; Enterprise Software PM</div>
-            <div class="rf-score">Strong fit</div>
-            <div class="rf-evidence">Direct evidence: 4 internal platforms shipped (Merak, FIT, SNM, PTJGM). Multi-stakeholder discovery, PRDs, RBAC, workflow design, Jira integration, cross-team rollout, iterative improvement based on user feedback. Users are domain experts with high expectations.</div>
+            <div class="rf-score">Relevant experience</div>
+            <div class="rf-evidence">3 internal products shipped (Merak, FIT, SNM) and 3 operating processes adopted org-wide. Multi-stakeholder discovery, PRDs, RBAC, workflow design, Jira integration, cross-team rollout, iterative improvement based on user feedback. Users are domain experts with high expectations.</div>
             <div class="rf-gap">Gap: No formal B2B contract lifecycle or procurement involvement.</div>
           </div>
           <div class="role-fit-card rf-strong">
             <div class="rf-role">Energy-Tech &amp; IoT PM</div>
-            <div class="rf-score">Strong fit</div>
+            <div class="rf-score">Relevant experience</div>
             <div class="rf-evidence">5+ years in smart metering (HES, MDMS, Prepaid), 10,000+ device deployments at Secure Meters, firmware calibration, AMI infrastructure, production automation, 7 peer-reviewed papers on smart grids and cybersecurity in energy systems.</div>
             <div class="rf-gap">Gap: Consumer energy products (smart home, EV) are adjacent but not direct experience.</div>
           </div>
           <div class="role-fit-card rf-mid">
             <div class="rf-role">B2B SaaS PM</div>
-            <div class="rf-score">Transferable fit</div>
+            <div class="rf-score">Transferable experience</div>
             <div class="rf-evidence">Core PM skills demonstrated: user discovery, workflow design, MVP scoping, stakeholder alignment, cross-functional execution, adoption tracking. Products are internal enterprise tools — structurally similar to B2B SaaS for multi-role organisations.</div>
             <div class="rf-gap">Gap: No ARR ownership, pricing strategy, churn or external customer acquisition experience. Would benefit from a B2B SaaS domain with existing engineering fluency (developer tools, operations, IoT, infrastructure).</div>
           </div>
           <div class="role-fit-card rf-mid">
             <div class="rf-role">Platform &amp; Technical PM</div>
-            <div class="rf-score">Good fit</div>
+            <div class="rf-score">Relevant experience</div>
             <div class="rf-evidence">Technically fluent: Python, SQL, REST APIs, PostgreSQL, CI/CD concepts used daily. Defined integrations (Jira sync, automated alerts, data pipelines), not just features. Comfortable in engineering-heavy environments and translating between business requirements and technical constraints.</div>
             <div class="rf-gap">Gap: No public API product, SDK or platform-as-a-product experience to date.</div>
           </div>
@@ -3302,11 +3325,11 @@
         <h2 class="section-title reveal">Products I <span class="g">Owned &amp; Shipped</span></h2>
         <p class="section-sub reveal">Actual screenshots from live production systems. Each product started from a real user problem, went through discovery, prioritisation and stakeholder alignment before shipping.</p>
 
-        <div class="tab-bar reveal">
-          <button class="tab-btn active" onclick="setTab(this,'merak')">Merak Dashboard</button>
-          <button class="tab-btn" onclick="setTab(this,'fit')">FIT - Field Issue Tracker</button>
-          <button class="tab-btn" onclick="setTab(this,'snm')">SNM - Serial Management</button>
-          <button class="tab-btn" onclick="setTab(this,'ptjgm')">PTJGM - Issue Tracker</button>
+        <div class="tab-bar reveal" role="tablist">
+          <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="tab-merak" onclick="setTab(this,'merak')">Merak Dashboard</button>
+          <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-fit" onclick="setTab(this,'fit')">FIT - Field Issue Tracker</button>
+          <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-snm" onclick="setTab(this,'snm')">SNM - Serial Management</button>
+          <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-ptjgm" onclick="setTab(this,'ptjgm')">PTJGM - Issue Tracker</button>
         </div>
 
         <div id="tab-merak" class="tab-panel active">
@@ -3685,9 +3708,14 @@
               <span class="res-badge" style="background:#FFF3D0;color:#9B6E00">In Progress</span>
             </div>
             <div class="res-item">
+              <h4>Go-To-Market Skillathon Winner</h4>
+              <p>Institute of Product Leadership · November 14, 2026 · Built full GTM strategy for FROZO — covering market research, positioning, pricing, acquisition and financial planning as part of the ICPM capstone.</p>
+              <span class="res-badge">Certificate of Recognition</span>
+            </div>
+            <div class="res-item">
               <h4>ICPM Modules</h4>
               <p>PM Fundamentals · Product Design (Figma, Balsamiq, Miro) · Agile PM · GTM Strategy · Data-Driven
-                Products (Mixpanel, GA) · Generative AI Co-Strategist</p>
+                Products · Generative AI Co-Strategist</p>
             </div>
             <div class="res-item">
               <h4>University of Virginia (Coursera)</h4>
@@ -3709,7 +3737,7 @@
         <h2 class="contact-title reveal">Let's Build Products<br>That <span style="color:var(--gold)">Matter.</span>
         </h2>
         <p class="contact-sub reveal">I enjoy solving complex problems, working with ambitious teams, and turning ideas
-          into products that deliver measurable impact. Currently open to senior PM opportunities.</p>
+          into products that deliver measurable impact. Open to Product Manager and Technical PM roles in B2B platforms, enterprise and industrial software.</p>
         <div class="contact-buttons reveal">
           <a class="ct-btn btn-wa" href="https://wa.me/917014281550" target="_blank" rel="noopener noreferrer">
             <svg viewBox="0 0 24 24" fill="currentColor">
@@ -3840,9 +3868,10 @@
       }
 
       function setTab(btn, id) {
-        document.querySelectorAll('.tab-btn').forEach(function (b) { b.classList.remove('active'); });
+        document.querySelectorAll('.tab-btn').forEach(function (b) { b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
         document.querySelectorAll('.tab-panel').forEach(function (p) { p.classList.remove('active'); });
         btn.classList.add('active');
+        btn.setAttribute('aria-selected','true');
         var panel = document.getElementById('tab-' + id);
         if (panel) panel.classList.add('active');
       }
