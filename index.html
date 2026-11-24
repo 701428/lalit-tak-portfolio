@@ -8,10 +8,10 @@
   content="Lalit Tak - Product Manager &amp; Engineering Lead specialising in smart metering, HES, MDMS and B2B enterprise platforms, smart metering (HES, MDMS, Prepaid) and B2B IoT products. Based in Jaipur, India.">
 <meta property="og:title" content="Lalit Tak - PM Portfolio">
 <meta property="og:description"
-  content="Product Manager with 5 years in energy-tech. Led 14 engineers. Shipped Merak, FIT, SNM. On-time delivery 60%→90%+.">
+  content="Product Manager with 5+ years in energy-tech. Led 14+ engineers. Shipped Merak, FIT, SNM. On-time delivery 60%→90%+.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://lalit-tak-resume.netlify.app">
-<meta property="og:image" content="https://lalit-tak-resume.netlify.app/images/img4.png">
+<meta property="og:image" content="https://lalit-tak-resume.netlify.app/images/og-preview.svg">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Lalit Tak - PM Portfolio">
 <meta name="twitter:description"
@@ -62,7 +62,6 @@
     color: var(--body);
     font-family: var(--ff-body);
     line-height: 1.6;
-    overflow-x: hidden;
     font-feature-settings: "kern" 1, "liga" 1
   }
 
@@ -2310,7 +2309,39 @@
     .mobile-sticky-bar { display: flex }
     .mobile-sticky-bar .btn { flex: 1; justify-content: center; font-size: .82rem; padding: 11px 16px }
     body { padding-bottom: 76px }
+    .mobile-sticky-bar { bottom: env(safe-area-inset-bottom, 0px); padding-bottom: calc(10px + env(safe-area-inset-bottom, 0px)) }
   }
+
+  /* ── RESPONSIVE GRID HELPERS ── */
+  .biz-ctx-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px
+  }
+  .eco-feats-2col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px
+  }
+  @media(max-width:600px) {
+    .biz-ctx-grid { grid-template-columns: 1fr }
+    .eco-feats-2col { grid-template-columns: 1fr }
+  }
+
+  /* ── BEFORE/AFTER MOBILE CARDS ── */
+  @media(max-width:600px) {
+    .workflow-table { display: none }
+    .workflow-cards { display: flex; flex-direction: column; gap: 10px }
+  }
+  @media(min-width:601px) {
+    .workflow-cards { display: none }
+  }
+  .wf-card { background: #fff; border-radius: var(--r-sm); overflow: hidden; box-shadow: var(--shadow) }
+  .wf-card-label { padding: 8px 14px; font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; background: var(--page-bg); color: var(--muted) }
+  .wf-card-asis { padding: 10px 14px; font-size: .83rem; background: #FFF0F0; color: #7B241C; border-top: 1px solid rgba(192,57,43,.1) }
+  .wf-card-tobe { padding: 10px 14px; font-size: .83rem; background: #F0FFF4; color: #1A5C32; border-top: 1px solid rgba(26,122,64,.1) }
+  .wf-card-asis::before { content: 'Before: '; font-weight: 700 }
+  .wf-card-tobe::before { content: 'After: '; font-weight: 700 }
 </style>
 </head>
 <body>
@@ -2342,7 +2373,7 @@
 <!-- MOBILE STICKY BAR -->
 <div class="mobile-sticky-bar">
   <a href="resume.html" target="_blank" rel="noopener" class="btn btn-outline">View Resume</a>
-  <a href="#contact" class="btn btn-primary">Contact Me</a>
+  <button class="btn btn-primary" onclick="var el=document.getElementById('contact');if(el)el.scrollIntoView({behavior:'smooth',block:'start'})">Contact Me</button>
 </div>
 <!-- MOBILE NAV -->
 <div class="nav-mobile" id="navMobile">
@@ -2362,7 +2393,7 @@
 <!-- LIGHTBOX -->
 <div id="lightbox" onclick="closeLightbox()">
   <button id="lightbox-close" onclick="closeLightbox()" aria-label="Close">&times;</button>
-  <img id="lightbox-img" src="" alt="">
+  <img id="lightbox-img" alt="">
 </div>
 
 <!-- ══════════ HERO ══════════ -->
@@ -2371,7 +2402,7 @@
     <div class="hero-left">
       <div class="hero-eyebrow">Product Manager &middot; Engineering Lead &middot; IoT &middot; Energy Tech
       </div>
-      <h1 class="hero-h1">Led 14 engineers.<br>Shipped 4 platforms.<br>Delivered <span class="g">results.</span></h1>
+      <h1 class="hero-h1">Led 14+ engineers.<br>Shipped 4 platforms.<br>Delivered <span class="g">results.</span></h1>
       <p class="hero-sub">Technical Product Manager with 5+ years in energy-tech - owning product lifecycle across HES,
         MDMS, Prepaid and manufacturing platforms at Polaris Smart Metering. I turn field problems into shipped
         software, from 0 to production. On-time delivery lifted from 60% to 90%+. Cycle time cut by 40%. Deployment
@@ -2404,7 +2435,7 @@
       <div class="hero-badges left">
         <div class="hero-badge"><span class="dot"></span>Data-Informed PM</div>
         <div class="hero-badge"><span class="dot"></span>Discovery</div>
-        <div class="hero-badge"><span class="dot"></span>North Star Metrics</div>
+        <div class="hero-badge"><span class="dot"></span>OKR / KPI</div>
       </div>
       <div class="hero-img-wrap">
         <picture>
@@ -2437,6 +2468,7 @@
             src="images/img2.png"
             alt="Lalit Tak - Product Manager"
             width="800" height="800"
+            loading="lazy"
             decoding="async">
         </picture>
         <div class="about-role-badge">PM &amp; Engineering Lead @ Polaris</div>
@@ -2444,7 +2476,7 @@
       <div class="about-content">
         <h2 class="about-headline reveal">"Engineering taught me how to build. Product taught me what to build."</h2>
         <div class="about-bio reveal reveal-delay-1">
-          <p>I'm a Technical Product Manager with nearly 5 years of experience in energy-tech and enterprise software.
+          <p>I'm a Technical Product Manager with 5+ years of experience in energy-tech and enterprise software.
             Currently SDE-3 Team Lead at Polaris Smart Metering, Jaipur - where I own the full product lifecycle across
             HES, MDMS, Prepaid and production-automation platforms with an AI-augmented delivery approach.</p>
           <p>I lead 14+ engineers using Agile/Scrum, turning ambiguous field problems into PRDs, roadmaps and shipped
@@ -2573,9 +2605,8 @@
             <div class="cap-title">Product Strategy</div>
             <div class="cap-evidence">Defined roadmaps for Merak, FIT &amp; SNM - all shipped to production in &lt;1
               year</div>
-            <div class="cap-tags"><span class="cap-tag">AI-First Thinking</span><span class="cap-tag">North Star
-                Metrics</span><span class="cap-tag">Roadmap Planning</span><span class="cap-tag">MVP
-                Definition</span><span class="cap-tag">OKR/KPI</span><span class="cap-tag">PLG</span></div>
+            <div class="cap-tags"><span class="cap-tag">AI-First Thinking</span><span class="cap-tag">Roadmap Planning</span><span class="cap-tag">MVP
+                Definition</span><span class="cap-tag">OKR/KPI</span></div>
           </div>
           <div class="cap-card reveal reveal-delay-2">
             <div class="cap-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -2659,8 +2690,7 @@
               workflows in daily use</div>
             <div class="cap-tags"><span class="cap-tag">Prompt Engineering</span><span class="cap-tag">LLM-Powered
                 Workflows</span><span class="cap-tag">GenAI Co-Strategist</span><span class="cap-tag">Intelligent
-                Automation</span><span class="cap-tag">OpenAI / Claude</span><span class="cap-tag">AI-Native Product Dev
-                </sp </div>
+                Automation</span><span class="cap-tag">OpenAI / Claude</span></div>
             </div>
           </div>
         </div>
@@ -2816,7 +2846,7 @@
         <div class="reveal" style="margin-bottom:48px">
           <h3 style="font-family:var(--ff-head);font-weight:700;font-size:1.3rem;color:var(--ink);margin-bottom:16px">A.
             Business Context</h3>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px">
+          <div class="biz-ctx-grid">
             <div style="background:#fff;border-radius:var(--r);padding:24px;box-shadow:var(--shadow)">
               <p style="font-size:.92rem;color:var(--body);line-height:1.75">Polaris Smart Metering (formerly Gram
                 Power) manufactures smart electricity and gas meters for utility deployments across India - with a 5
@@ -2907,6 +2937,7 @@
               <div class="persona-avatar"><img
                   src="images/img3.svg"
                   loading="lazy" decoding="async"
+                  width="716" height="716"
                   alt="Arjun persona"></div>
               <div class="persona-name" style="margin-top:12px">Meet Arjun</div>
               <div class="persona-role">Production Engineer, 28, Jaipur</div>
@@ -3002,6 +3033,14 @@
                 </tr>
               </tbody>
             </table>
+          </div>
+          <div class="workflow-cards">
+            <div class="wf-card"><div class="wf-card-label">Production tracking</div><div class="wf-card-asis">WhatsApp groups + paper logbooks. No live status.</div><div class="wf-card-tobe">Merak live dashboard. Real-time throughput across 6 stations.</div></div>
+            <div class="wf-card"><div class="wf-card-label">Serial traceability</div><div class="wf-card-asis">Manual Excel sheets. Error-prone, no audit trail.</div><div class="wf-card-tobe">SNM – RBAC, batch generation, audit trail, multi-format export.</div></div>
+            <div class="wf-card"><div class="wf-card-label">Field issues</div><div class="wf-card-asis">Email chains. No lifecycle, no ownership.</div><div class="wf-card-tobe">FIT – 7-stage lifecycle, Jira-synced, SLA-driven triage.</div></div>
+            <div class="wf-card"><div class="wf-card-label">Firmware status</div><div class="wf-card-asis">Verbal updates in stand-ups only.</div><div class="wf-card-tobe">Merak real-time calibration view, visible to all teams.</div></div>
+            <div class="wf-card"><div class="wf-card-label">Coordination</div><div class="wf-card-asis">Ad-hoc meetings. No audit trail.</div><div class="wf-card-tobe">Structured workflows, automated alerts, RCA/CAPA.</div></div>
+            <div class="wf-card"><div class="wf-card-label">Delivery</div><div class="wf-card-asis">~60% on-time</div><div class="wf-card-tobe">90%+ on-time</div></div>
           </div>
           <!-- Product Journey -->
           <div class="reveal" style="margin-bottom:48px">
@@ -3127,7 +3166,7 @@
               <div class="eco-title">SNM</div>
               <div class="eco-sub">Serial Number Management - Production traceability for 1,000+ device deployments
               </div>
-              <ul class="eco-feats" style="display:grid;grid-template-columns:1fr 1fr;gap:6px">
+              <ul class="eco-feats eco-feats-2col">
                 <li>Batch generation up to 1,000 serial numbers</li>
                 <li>Duplicate &amp; range-overlap detection</li>
                 <li>Immutable records with full audit trails</li>
@@ -3641,17 +3680,37 @@
       // Hamburger menu
       var hamburger = document.getElementById('navHamburger');
       var mobileNav = document.getElementById('navMobile');
+      hamburger.setAttribute('aria-expanded', 'false');
+      hamburger.setAttribute('aria-controls', 'navMobile');
+
+      function openMobileNav() {
+        hamburger.classList.add('open');
+        mobileNav.classList.add('open');
+        hamburger.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
+        var firstLink = mobileNav.querySelector('a');
+        if (firstLink) firstLink.focus();
+      }
+
+      function closeMobileNav() {
+        hamburger.classList.remove('open');
+        mobileNav.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+        hamburger.focus();
+      }
+
       hamburger.addEventListener('click', function () {
-        hamburger.classList.toggle('open');
-        mobileNav.classList.toggle('open');
-        document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
+        if (mobileNav.classList.contains('open')) closeMobileNav();
+        else openMobileNav();
       });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && mobileNav.classList.contains('open')) closeMobileNav();
+      });
+
       document.querySelectorAll('.nav-mobile a').forEach(function (link) {
-        link.addEventListener('click', function () {
-          hamburger.classList.remove('open');
-          mobileNav.classList.remove('open');
-          document.body.style.overflow = '';
-        });
+        link.addEventListener('click', function () { closeMobileNav(); });
       });
 
       // Scroll progress
@@ -3735,6 +3794,63 @@
       }, { threshold: 0.2 });
       var impactSection = document.getElementById('impact');
       if (impactSection) cio.observe(impactSection);
+
+      // ── LIGHTBOX ──
+      (function () {
+        var lb = document.getElementById('lightbox');
+        var lbImg = document.getElementById('lightbox-img');
+        var lbClose = document.getElementById('lightbox-close');
+        var lbTrigger = null;
+
+        function openLightbox(src, alt, trigger) {
+          if (!lb || !lbImg) return;
+          lbTrigger = trigger || null;
+          lbImg.removeAttribute('src');
+          lbImg.alt = alt || '';
+          lb.classList.add('open');
+          lb.setAttribute('aria-hidden', 'false');
+          document.body.style.overflow = 'hidden';
+          lbImg.src = src;
+          if (lbClose) lbClose.focus();
+        }
+
+        function closeLightbox() {
+          if (!lb) return;
+          lb.classList.remove('open');
+          lb.setAttribute('aria-hidden', 'true');
+          document.body.style.overflow = '';
+          lbImg.removeAttribute('src');
+          lbImg.alt = '';
+          if (lbTrigger) { lbTrigger.focus(); lbTrigger = null; }
+        }
+
+        window.openLightbox = openLightbox;
+        window.closeLightbox = closeLightbox;
+
+        if (lb) {
+          lb.setAttribute('role', 'dialog');
+          lb.setAttribute('aria-modal', 'true');
+          lb.setAttribute('aria-label', 'Screenshot preview');
+          lb.setAttribute('aria-hidden', 'true');
+          lb.addEventListener('click', function (e) {
+            if (e.target === lb) closeLightbox();
+          });
+        }
+
+        document.querySelectorAll('.showcase-img img').forEach(function (img) {
+          img.setAttribute('tabindex', '0');
+          img.setAttribute('role', 'button');
+          img.setAttribute('aria-label', 'View larger: ' + (img.alt || 'screenshot'));
+          img.addEventListener('click', function () { openLightbox(img.src, img.alt, img); });
+          img.addEventListener('keydown', function (e) {
+            if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openLightbox(img.src, img.alt, img); }
+          });
+        });
+
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape' && lb && lb.classList.contains('open')) closeLightbox();
+        });
+      })();
 
     </script>
 </body>
